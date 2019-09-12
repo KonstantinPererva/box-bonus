@@ -1,41 +1,56 @@
 function Scale(node) {
     var _S = this;
+    _S.slave = null;
+    _S.wrapper = null;
+    _S.leading = null;
 
     _S.node = node || null;
+
     _S.min = _S.node.dataset.min || null;
     _S.max = _S.node.dataset.max || null;
-    _S.mark = _S.node.querySelectorAll('[data-mark]') || null;
-    _S.wrapper = null;
-
     _S.dif = parseInt(_S.max, 10) - parseInt(_S.min, 10);
 
-    _S.card = function (el) {
-        // debugger;
-        var parent = el.parentElement;
-        _S.wrapper = parent;
+    _S.mark = _S.node.querySelectorAll('[data-mark]') || null;
+    _S.band = _S.node.querySelector('[data-band]') || null;
 
-        if (parent == document.querySelector('.bonus-card-content')) {return;}
+    _S.activeBonus = function() {
+        [].forEach.call(_S.mark, function (mark) {
+            mark.slave = mark.querySelector('[data-slave]');
+            console.log(mark.slave);
 
-        _S.card(_S.wrapper);
+            var pos = parseInt(mark.dataset.position, 10);
+            var data = parseInt(_S.leading.dataset.leading, 10);
+
+            if (pos <= data) {
+                mark.slave.classList.add('active');
+            }
+        })
     };
 
-    _S.card(_S.node);
+    _S.setLeading = function() {
+        _S.parentSearch(_S.node);
+        _S.leading = _S.wrapper.querySelector('[data-leading]') || null;
+    };
 
-    _S.leading = _S.wrapper.querySelector('[data-leading]') || null;
-    _S.band = _S.node.querySelector('[data-band]') || null;
+    _S.parentSearch = function(el) {
+        // debugger;
+        var parent = el.parentElement;
+
+        if (parent.dataset.card === "bonus") {
+            return _S.wrapper = parent;
+        }
+
+        _S.parentSearch(parent);
+    };
 
     _S.fullness = function() {
         var data = _S.leading.dataset.leading;
         var per = (parseInt(data, 10) - _S.dif) * 100 / _S.dif;
 
-        console.log(data);
-        console.log(parseInt(data, 10));
-        console.log(per);
-
         _S.band.style.width = per + "%";
     };
 
-    _S.positionMark = function () {
+    _S.positionMark = function() {
         [].forEach.call(_S.mark, function (mark, ind) {
             var pos = mark.dataset.position;
             var per = (parseInt(pos, 10) - _S.dif) * 100 / _S.dif;
@@ -45,11 +60,18 @@ function Scale(node) {
             } else {
                 mark.style.left = "calc(" + per + "% - 1px)";
             }
-
         })
     };
 
-    _S.positionMark();
-    _S.fullness();
+    _S.init = function() {
+        _S.positionMark();
+        _S.setLeading();
+        _S.fullness();
+        _S.activeBonus();
+    };
 
+    return {
+        init: _S.init,
+
+    }
 }

@@ -25,7 +25,8 @@ if (document.querySelector('[data-scale="bonus"]')) {
     var scaleList = document.querySelectorAll('[data-scale="bonus"]');
     [].forEach.call(scaleList, function (scale) {
         if(scale){
-            new Scale(scale);
+            let scl = new Scale(scale);
+            scl.init();
         }
     });
 }
