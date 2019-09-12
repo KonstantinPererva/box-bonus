@@ -1,0 +1,32 @@
+.logo {
+  display: inline-block;
+  vertical-align: middle;
+  padding: 1px 7px 5px 0;
+  border-right: 1px solid #888;
+
+  @media (max-width: 939px) {
+    float: left;
+    border: 0;
+  }
+
+  @media (max-width: 638px) {
+    top: 5px;
+  }
+
+  & a {
+    display: block;
+    width: 156px;
+
+    @media (max-width: 638px) {
+      width: 100px;
+    }
+  }
+
+  & img {
+    vertical-align: top;
+
+    @media (max-width: 638px) {
+      width: 100%;
+    }
+  }
+}

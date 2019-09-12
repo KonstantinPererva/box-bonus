@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bonuses</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <button class="open-popup-bonuses">Бонусы и пропозиции</button>
+
+    <div class="bonus" data-container="bonus">
+        <div class="bonus__inner">
+            <div class="bonus__table"></div>
+
+            <div class="bonus__content" data-content="bonus__content">
+                <div class="bonus-info">
+                    <div class="bonus-info__button-back">
+                        <button type="button" class="button-back" data-close-container="bonus">
+                                <span class="button-back__ico-wrap">
+                                    <svg width="13" height="21" viewBox="0 0 13 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M11.4737 1.60449L2 10.5782L11.4737 20.1045" stroke-width="2"/>
+                                    </svg>
+                                </span>
+
+                            <span class="button-back__text">Назад</span>
+                        </button>
+                    </div>
+
+                    <div class="bonus-info__hold">
+                        <div class="bonus-card" data-container="bonus-card">
+                            <div class="bonus-card-title" data-button="bonus-card">
+                                <span class="bonus-card-title__ico">
+                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="10" cy="10" r="10" fill="#E30613"/>
+                                        <path d="M6.59986 14L12.6024 6H13.3952L7.3978 14H6.59986ZM8.15971 10C7.66207 10 7.26739 9.8284 6.97567 9.4852C6.68395 9.142 6.53809 8.67868 6.53809 8.09524C6.53809 7.50837 6.68395 7.04505 6.97567 6.70528C7.26739 6.36208 7.66207 6.19048 8.15971 6.19048C8.65392 6.19048 9.04688 6.36208 9.3386 6.70528C9.63032 7.04505 9.77618 7.50837 9.77618 8.09524C9.77618 8.67868 9.63032 9.142 9.3386 9.4852C9.04688 9.8284 8.65392 10 8.15971 10ZM8.15971 9.49035C8.42054 9.49035 8.62818 9.36508 8.78262 9.11454C8.93706 8.86057 9.01428 8.52081 9.01428 8.09524C9.01428 7.66624 8.93706 7.32647 8.78262 7.07593C8.62818 6.82196 8.42054 6.69498 8.15971 6.69498C7.89544 6.69498 7.68609 6.82196 7.53165 7.07593C7.37721 7.32647 7.29999 7.66624 7.29999 8.09524C7.29999 8.52081 7.37721 8.86057 7.53165 9.11454C7.68609 9.36508 7.89544 9.49035 8.15971 9.49035ZM11.8405 13.8095C11.3429 13.8095 10.9482 13.6379 10.6565 13.2947C10.3682 12.9515 10.2241 12.4882 10.2241 11.9048C10.2241 11.3213 10.3682 10.858 10.6565 10.5148C10.9482 10.1716 11.3429 10 11.8405 10C12.3382 10 12.7329 10.1716 13.0246 10.5148C13.3163 10.858 13.4622 11.3213 13.4622 11.9048C13.4622 12.4882 13.3163 12.9515 13.0246 13.2947C12.7329 13.6379 12.3382 13.8095 11.8405 13.8095ZM11.8405 13.2999C12.1048 13.2999 12.3141 13.1746 12.4686 12.9241C12.623 12.6735 12.7002 12.3338 12.7002 11.9048C12.7002 11.4758 12.623 11.136 12.4686 10.8855C12.3141 10.6315 12.1048 10.5045 11.8405 10.5045C11.5797 10.5045 11.3721 10.6315 11.2176 10.8855C11.0632 11.136 10.986 11.4758 10.986 11.9048C10.986 12.3338 11.0632 12.6735 11.2176 12.9241C11.3721 13.1746 11.5797 13.2999 11.8405 13.2999Z" fill="white"/>
+                                    </svg>
+                                </span>
+
+                                <span class="bonus-card-title__text">Возьми на сумму - получи бонусы</span>
+
+                                <span class="bonus-card-title__arrow" data-indicator="bonus-card">
+                                    <svg width="14" height="9" viewBox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M13 8.14509L7 2L1 8.14509" stroke="#344E9F" stroke-width="2"/>
+                                    </svg>
+                                </span>
+                            </div>
+
+                            <div class="bonus-card-content" data-box="bonus-card" data-card="bonus">
+                                <div class="bonus-card-content__scale">
+                                    <div class="scale" data-scale="bonus" data-min="5000" data-max="10000">
+                                        <div class="scale__inner">
+                                            <div class="scale-mark" data-mark data-position="5000">
+                                                <span class="scale-mark__text scale-mark__text_top scale-mark__text_left">5000</span>
+
+                                                <span class="scale-mark__line"></span>
+
+                                                <span class="scale-mark__text scale-mark__text_bottom scale-mark__text_left">1%</span>
+                                            </div>
+
+                                            <div class="scale-mark" data-mark data-position="7000">
+                                                <span class="scale-mark__text scale-mark__text_top scale-mark__text_center">7000</span>
+
+                                                <span class="scale-mark__line"></span>
+
+                                                <span class="scale-mark__text scale-mark__text_bottom scale-mark__text_center">1,5%</span>
+                                            </div>
+
+                                            <div class="scale-mark" data-mark data-position="10000">
+                                                <span class="scale-mark__text scale-mark__text_top scale-mark__text_right">10000</span>
+
+                                                <span class="scale-mark__line"></span>
+
+                                                <span class="scale-mark__text scale-mark__text_bottom scale-mark__text_right">2%</span>
+                                            </div>
+
+                                            <div class="scale-track" >
+                                                <span class="scale-track__band" data-band="scale-track__band">
+                                                    <span class="scale-track__pointer" data-pointer="scale-track__pointer"></span>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="bonus-card-content__button">
+                                    <button class="bonus-button bonus-button_blue">Подобрать товары</button>
+                                </div>
+
+                                <div class="bonus-card-content__data">
+                                    <div class="bonus-row">
+                                        <span class="bonus-row__text-left">Мой чек</span>
+
+                                        <span class="bonus-row__text-right bonus-row__text-right_blue" data-leading="6432">6 432 грн</span>
+                                    </div>
+
+                                    <div class="bonus-row">
+                                        <span class="bonus-row__text-left">Выгода</span>
+
+                                        <span class="bonus-row__text-right bonus-row__text-right_red">1 234 грн</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="bonus-card" data-container="bonus-card">
+                            <div class="bonus-card-title" data-button="bonus-card">
+                                <span class="bonus-card-title__ico">
+                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="10" cy="10" r="10" fill="#344E9F"/>
+                                        <path d="M5.625 10.3066V14.0566C5.625 14.4016 5.90562 14.6816 6.25 14.6816H9.375V10.3066H5.625Z" fill="white"/>
+                                        <path d="M14.375 7.80657H12.3975C12.5394 7.7097 12.6613 7.61345 12.7463 7.5272C13.2506 7.02032 13.2506 6.19532 12.7463 5.68845C12.2562 5.1947 11.4025 5.19595 10.9131 5.68845C10.6419 5.96032 9.92313 7.0672 10.0225 7.80657H9.9775C10.0763 7.0672 9.3575 5.96032 9.08687 5.68845C8.59687 5.19595 7.74312 5.19595 7.25375 5.68845C6.75 6.19532 6.75 7.02032 7.25312 7.5272C7.33875 7.61345 7.46062 7.7097 7.6025 7.80657H5.625C5.28062 7.80657 5 8.0872 5 8.43157V9.36907C5 9.54157 5.14 9.68157 5.3125 9.68157H9.375V8.43157H10.625V9.68157H14.6875C14.86 9.68157 15 9.54157 15 9.36907V8.43157C15 8.0872 14.72 7.80657 14.375 7.80657ZM9.33813 7.78595C9.33813 7.78595 9.31187 7.80657 9.2225 7.80657C8.79063 7.80657 7.96625 7.35782 7.69688 7.08657C7.435 6.82282 7.435 6.39282 7.69688 6.12907C7.82375 6.00157 7.99187 5.93157 8.17062 5.93157C8.34875 5.93157 8.51688 6.00157 8.64375 6.12907C9.065 6.55282 9.48375 7.63532 9.33813 7.78595ZM10.7769 7.80657C10.6881 7.80657 10.6619 7.78657 10.6619 7.78595C10.5163 7.63532 10.935 6.55282 11.3562 6.12907C11.6081 5.8747 12.0488 5.87345 12.3031 6.12907C12.5656 6.39282 12.5656 6.82282 12.3031 7.08657C12.0338 7.35782 11.2094 7.80657 10.7769 7.80657Z" fill="white"/>
+                                        <path d="M10.625 10.3066V14.6816H13.75C14.095 14.6816 14.375 14.4016 14.375 14.0566V10.3066H10.625Z" fill="white"/>
+                                    </svg>
+                                </span>
+
+                                <span class="bonus-card-title__text">Возьми на сумму - получи подарок</span>
+
+                                <span class="bonus-card-title__arrow" data-indicator="bonus-card">
+                                    <svg width="14" height="9" viewBox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M13 8.14509L7 2L1 8.14509" stroke="#344E9F" stroke-width="2"/>
+                                    </svg>
+                                </span>
+                            </div>
+
+                            <div class="bonus-card-content" data-box="bonus-card" data-card="bonus">
+                                <div class="bonus-card-content__scale">
+                                    <div class="scale" data-scale="bonus" data-min="5000" data-max="10000">
+                                        <div class="scale__inner">
+                                            <div class="scale-mark" data-mark data-position="5000">
+                                                <span class="scale-mark__text scale-mark__text_top scale-mark__text_left">5000</span>
+
+                                                <span class="scale-mark__line"></span>
+
+                                                <span class="scale-mark__img scale-mark__img_left">
+                                                    <img src="images/gift-1.jpg" alt="gift" />
+                                                </span>
+                                            </div>
+
+                                            <div class="scale-mark" data-mark data-position="7000">
+                                                <span class="scale-mark__text scale-mark__text_top scale-mark__text_center">7000</span>
+
+                                                <span class="scale-mark__line"></span>
+
+                                                <span class="scale-mark__text scale-mark__text_bottom scale-mark__text_center">1,5%</span>
+                                            </div>
+
+                                            <div class="scale-mark" data-mark data-position="10000">
+                                                <span class="scale-mark__text scale-mark__text_top scale-mark__text_right">10000</span>
+
+                                                <span class="scale-mark__line"></span>
+
+                                                <span class="scale-mark__text scale-mark__text_bottom scale-mark__text_right">2%</span>
+                                            </div>
+
+                                            <div class="scale-track" >
+                                                <span class="scale-track__band" data-band="scale-track__band">
+                                                    <span class="scale-track__pointer" data-pointer="scale-track__pointer"></span>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="bonus-card-content__button">
+                                    <button class="bonus-button bonus-button_blue">Подобрать товары</button>
+                                </div>
+
+                                <div class="bonus-card-content__data">
+                                    <div class="bonus-row">
+                                        <span class="bonus-row__text-left">Мой чек</span>
+
+                                        <span class="bonus-row__text-right bonus-row__text-right_blue" data-leading="6432">6 432 грн</span>
+                                    </div>
+
+                                    <div class="bonus-row">
+                                        <span class="bonus-row__text-left">Выгода</span>
+
+                                        <span class="bonus-row__text-right bonus-row__text-right_red">1 234 грн</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> <!-- end bonus-info -->
+            </div> <!-- end bonus__content -->
+
+            <span class="bonus__substrate bonus__substrate_container" data-substrate-container="bonus-substrate-container"></span>
+        </div> <!-- end bonus__inner -->
+    </div> <!-- end bonus -->
+
+    <script src="js/jquery-2.1.4.min.js"></script>
+    <script src="js/simplebar.js"></script>
+    <script src="js/containerDetail.js"></script>
+    <script src="js/dropdown.js"></script>
+    <script src="js/scale.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>

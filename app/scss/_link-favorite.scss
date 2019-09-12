@@ -1,0 +1,43 @@
+@import "var";
+
+$ico: #fff;
+$ico-active: #fff;
+
+.link-favorite {
+  display: flex;
+  align-items: center;
+  margin-right: -26px;
+
+  &__button {
+    position: relative;
+    display: block;
+    width: 20px;
+    height: 20px;
+    padding: 0;
+    background: 0;
+    border: 0;
+    outline: none;
+    user-select: none;
+    margin: 0 8px 0 0;
+
+    @media (hover: hover) {
+      &:hover {
+        cursor: pointer;
+      }
+    }
+
+    &:focus, &:active {
+      outline: none;
+    }
+
+    & svg {
+      display: block;
+      width: 100%;
+
+      & path {
+        stroke: $ico;
+        transition: .15s;
+      }
+    }
+  }
+}

@@ -1,0 +1,29 @@
+@import "button-common";
+
+.button-remove-order-item {
+  @extend %button-common;
+  padding: 0;
+  width: 24px;
+  height: 24px;
+  border: 0;
+  background: transparent;
+  margin: 0 -8px;
+
+  & svg {
+    display: block;
+    flex-shrink: 0;
+
+    & path {
+      transition: .15s;
+      stroke: $c-text-main;
+    }
+  }
+
+  @media (hover: hover) {
+    &:hover {
+      & svg path {
+        stroke: $c-red;
+      }
+    }
+  }
+}

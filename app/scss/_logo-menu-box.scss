@@ -1,0 +1,14 @@
+.logo-menu-box {
+  float: left;
+
+  & .menu {
+    display: inline-flex;
+    align-items: center;
+    height: 30px;
+
+    & li a {
+      display: block;
+      padding: 3px 0;
+    }
+  }
+}

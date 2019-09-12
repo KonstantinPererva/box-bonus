@@ -1,0 +1,20 @@
+.card-item {
+  width: 225px;
+  height: 357px;
+  border: 1px solid $c-border;
+  padding: 9px 9px 7px;
+  margin: 0 8px 8px 0;
+
+  &__header {
+    position: relative;
+  }
+
+  &__body {
+    padding: 8px 0 0;
+    margin: 0 0 10px;
+  }
+
+  &__footer {
+
+  }
+}

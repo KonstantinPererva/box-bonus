@@ -1,0 +1,14 @@
+.warning {
+  padding: 10px 0;
+
+  &__text {
+    font-size: 11px;
+    line-height: 13px;
+    font-family: $f-l;
+    color: $c-text-main;
+
+    & strong {
+      color: $c-red;
+    }
+  }
+}

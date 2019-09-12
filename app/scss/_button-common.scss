@@ -1,0 +1,24 @@
+%button-common {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: $f-l;
+  transition: .15s;
+  outline: none;
+  user-select: none;
+  text-decoration: none;
+  vertical-align: top;
+  white-space: nowrap;
+
+  @media (hover:hover) {
+    &:hover {
+      cursor: pointer;
+      text-decoration: none;
+    }
+  }
+
+  &:hover,&:focus,&:active {
+    text-decoration: none;
+    outline: none;
+  }
+}

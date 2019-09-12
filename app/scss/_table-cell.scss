@@ -1,0 +1,37 @@
+.table-cell {
+  position: relative;
+  flex: 1;
+  height: 25px;
+  display: table-cell;
+  border: 1px solid $c-gray-1;
+  align-items: center;
+  font-size: 11px;
+  font-family: $f-l;
+  vertical-align: middle;
+  white-space: nowrap;
+  padding: 0 8px;
+
+  &_hr {
+    text-align: center;
+  }
+
+  &_filter {
+    padding: 0;
+  }
+
+  &__inner {
+    overflow: hidden;
+    position: relative;
+  }
+
+  &__drag {
+    width: 7px;
+    position: absolute;
+    height: 100%;
+    //background: #000;
+    right: -4px;
+    top: 0;
+    z-index: 1;
+    cursor: col-resize;
+  }
+}

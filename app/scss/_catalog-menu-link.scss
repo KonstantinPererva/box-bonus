@@ -1,0 +1,100 @@
+.catalog-menu-link {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 5px 10px 5px 28px;
+  text-decoration: none;
+  color: $c-text-main;
+  font-size: 14px;
+  line-height: 16px;
+  font-family: $f-l;
+  user-select: none;
+
+  @media (hover: hover) {
+    &:hover {
+      text-decoration: none;
+      background: $c-blue-light;
+      cursor: pointer;
+      color: $c-text-main;
+    }
+  }
+
+  &:focus, &:active {
+    outline: none;
+    border: 0;
+    color: $c-text-main;
+  }
+
+  &:after {
+    content: '';
+    position: absolute;
+    left: 14px;
+    top: 7px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 5px 0 5px 4px;
+    border-color: transparent transparent transparent $c-gray-13;
+    transition: .3s;
+  }
+
+  &.active {
+    &:after {
+      transform: rotate(90deg);
+    }
+  }
+
+  &_new, &_bonus, &_gift, &_my-goods {
+    display: flex;
+    align-items: center;
+    padding: 5px 10px 5px 14px;
+
+    &:after {
+      display: none;
+    }
+  }
+
+  &_new {
+    color: #1268B1;
+
+    @media (hover: hover) {
+      &:hover {
+        color: #1268B1;
+      }
+    }
+  }
+
+  &_bonus {
+    color: #E30613;
+
+    @media (hover: hover) {
+      &:hover {
+        color: #E30613;
+      }
+    }
+  }
+
+  &_gift {
+    color: #038100;
+
+    @media (hover: hover) {
+      &:hover {
+        color: #038100;
+      }
+    }
+  }
+
+  &_my-goods {
+    color: #333333;
+
+    @media (hover: hover) {
+      &:hover {
+        color: #333333;
+      }
+    }
+  }
+
+  &__ico {
+    margin: 0 8px 0 0;
+  }
+}

@@ -1,0 +1,57 @@
+@import "var";
+
+$ico: $c-gray-1;
+$ico-active: $c-red;
+
+.favorite {
+  display: flex;
+  align-items: center;
+
+  &__button {
+    width: 20px;
+    height: 20px;
+    padding: 0;
+    background: 0;
+    border: 0;
+    outline: none;
+    user-select: none;
+    margin: 0 8px 0 0;
+
+    @media (hover: hover) {
+      &:hover {
+        cursor: pointer;
+
+        & svg path {
+          stroke: $ico-active;
+        }
+      }
+    }
+
+    &:focus, &:active {
+      outline: none;
+    }
+
+    & svg {
+      display: block;
+      width: 100%;
+
+      & path {
+        stroke: $ico;
+        transition: .15s;
+      }
+    }
+
+    &_active {
+      & svg path {
+        fill: $ico-active;
+        stroke: $ico-active;
+      }
+    }
+  }
+
+  &__text {
+    display: block;
+    font-size: 11px;
+    color: $c-text-main;
+  }
+}

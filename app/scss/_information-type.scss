@@ -1,0 +1,47 @@
+@import "button-common";
+
+.information-type {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  margin: 0 0 0 16px;
+  height: 24px;
+
+  &__text {
+    display: block;
+    font-size: 13px;
+    color: $c-text-main;
+  }
+
+  &__button {
+    @extend %button-common;
+    height: 24px;
+    margin: 0 0 0 16px;
+
+    @media (hover: hover) {
+      &:hover {
+        & svg {
+          & path, & rect {
+            fill: $c-blue;
+          }
+        }
+      }
+    }
+
+    &.active {
+      & svg {
+        & path, & rect {
+          fill: $c-blue;
+        }
+      }
+    }
+
+    & svg {
+      display: block;
+
+      & path, & rect {
+        transition: .15s;
+      }
+    }
+  }
+}

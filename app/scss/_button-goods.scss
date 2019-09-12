@@ -1,0 +1,75 @@
+@import "button-common";
+
+$c-fill-svg: $c-gray-12;
+$c-fill-svg-hover: $c-gray-7;
+
+.button-goods {
+  @extend %button-common;
+  background: transparent;
+  border: 0;
+  padding: 0;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 2px;
+
+  & svg {
+    flex-shrink: 0;
+    display: block;
+
+    & path {
+      transition: .15s;
+    }
+  }
+
+  &_photo {
+    & svg path {
+      fill: $c-blue;
+    }
+
+    @media (hover: hover) {
+      &:hover {
+        & svg path {
+          fill: $c-blue-dark;
+        }
+      }
+    }
+  }
+
+  &_interchange {
+    & svg path {
+      fill: $c-fill-svg;
+    }
+
+    @media (hover: hover) {
+      &:hover {
+        & svg path {
+          fill: $c-fill-svg-hover;
+        }
+      }
+    }
+  }
+
+  &_favorite {
+    & svg path {
+      stroke: $c-fill-svg;
+    }
+
+    @media (hover: hover) {
+      &:hover {
+        & svg path {
+          stroke: $c-red;
+        }
+      }
+    }
+
+    &.active {
+      & svg path {
+        stroke: $c-red;
+        fill: $c-red;
+      }
+    }
+  }
+}

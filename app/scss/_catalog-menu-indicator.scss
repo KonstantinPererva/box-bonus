@@ -1,0 +1,15 @@
+.catalog-menu-indicator {
+  position: absolute;
+  left: 14px;
+  top: 7px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 5px 0 5px 4px;
+  border-color: transparent transparent transparent $c-gray-13;
+  transition: .3s;
+
+  &.open {
+    transform: rotate(90deg);
+  }
+}

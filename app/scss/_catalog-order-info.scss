@@ -1,0 +1,52 @@
+.catalog-order-info {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 50px;
+
+  &-offer {
+    padding: 10px;
+    margin: 0 20px 0 0;
+
+    &__text {
+      display: block;
+      font-family: $f-l;
+      color: $c-text-gray;
+      font-size: 10px;
+      line-height: 14px;
+    }
+
+    &__strong {
+      color: $c-text-main;
+    }
+  }
+
+  &-sum {
+    display: flex;
+    align-items: flex-end;
+    padding: 16px;
+
+    &__text {
+      display: block;
+      font-family: $f-l;
+      color: $c-text-main;
+
+      &_bonus {
+        font-size: 12px;
+        line-height: 14px;
+        margin: 0 20px 0 0;
+      }
+
+      &_order {
+        font-size: 14px;
+        line-height: 16px;
+      }
+    }
+
+    &__strong {
+      color: $c-blue;
+    }
+  }
+}

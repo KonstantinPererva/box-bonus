@@ -1,0 +1,16 @@
+.card-item-name {
+  margin: 0 0 16px;
+
+  &__text {
+    display: block;
+    font-size: 12px;
+    line-height: 17px;
+    color: #333;
+    height: 50px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+  }
+}
