@@ -16,7 +16,6 @@ function Scale(node) {
     _S.activeBonus = function() {
         [].forEach.call(_S.mark, function (mark) {
             mark.slave = mark.querySelector('[data-slave]');
-            console.log(mark.slave);
 
             var pos = parseInt(mark.dataset.position, 10);
             var data = parseInt(_S.leading.dataset.leading, 10);
@@ -33,9 +32,8 @@ function Scale(node) {
     };
 
     _S.parentSearch = function(el) {
-        // debugger;
         var parent = el.parentElement;
-
+3
         if (parent.dataset.card === "bonus") {
             return _S.wrapper = parent;
         }
@@ -45,18 +43,24 @@ function Scale(node) {
 
     _S.fullness = function() {
         var data = _S.leading.dataset.leading;
-        var per = (parseInt(data, 10) - _S.dif) * 100 / _S.dif;
+        var per = (parseInt(data, 10) - _S.min) * 100 / _S.dif;
 
-        _S.band.style.width = per + "%";
+        if (per > 100) {
+            _S.band.style.width = "100%";
+        } else if (per < 0) {
+            _S.band.style.width = "0";
+        } else {
+            _S.band.style.width = per + "%";
+        }
     };
 
     _S.positionMark = function() {
         [].forEach.call(_S.mark, function (mark, ind) {
             var pos = mark.dataset.position;
-            var per = (parseInt(pos, 10) - _S.dif) * 100 / _S.dif;
+            var per = (parseInt(pos, 10) - _S.min) * 100 / _S.dif;
 
             if (_S.mark[0] === _S.mark[ind]) {
-                mark.style.left = per;
+                mark.style.left = per + "%";
             } else {
                 mark.style.left = "calc(" + per + "% - 1px)";
             }
