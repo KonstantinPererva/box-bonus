@@ -51,6 +51,7 @@
       line-height: 13px;
       font-family: $f-l;
       padding: 5px 0;
+      white-space: nowrap;
 
       &.active {
         font-weight: 900;
