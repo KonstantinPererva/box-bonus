@@ -190,16 +190,26 @@
   padding: 7px 0;
 
   &__text-left {
+    display: block;
     font-size: 11px;
     line-height: 13px;
     color: $c-gray-3;
     font-family: $f-l;
+    width: 95px;
+    padding: 0 0 0 3px;
   }
 
   &__text-right {
+    display: block;
     font-size: 14px;
     line-height: 14px;
     font-family: $f-l;
+    flex: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 175px;
+    text-align: right;
 
     &_blue {
       color: $c-blue;
