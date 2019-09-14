@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Bonuses</title>
 
+    <link rel="stylesheet" href="css/simplebar.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -15,7 +16,480 @@
 
     <div class="bonus" data-container="bonus">
         <div class="bonus__inner">
-            <div class="bonus__table"></div>
+            <div class="bonus__table">
+
+                <div class="table" data-active="true" data-goods="table-list" style="width: 785px;">
+                    <div class="table-header" style="width: 100%;" data-width="785">
+                        <div class="table-header__inner">
+                            <div class="table-row">
+                                <div class="table-cell table-cell_hr" style="width: 80px;"></div>
+
+                                <div class="table-cell table-cell_hr table-cell-resizable" style="width: 100px;">
+                                    <div class="table-cell__inner">
+                                        <span class="table-cell__text table-cell__text_hr">Код</span>
+
+                                        <span class="table-cell__ico"></span>
+                                    </div>
+
+                                    <div class="table-cell__drag"></div>
+                                </div>
+
+                                <div class="table-cell table-cell_hr table-cell-resizable" style="width: 100px;">
+                                    <div class="table-cell__inner sort section">
+                                        <span class="table-cell__text table-cell__text_hr">ОЕМ</span>
+
+                                        <span class="table-cell__ico table-cell__ico_sort arr-down" data-section_id="" data-sort="PROPERTY_OEM"></span>
+                                    </div>
+
+                                    <div class="table-cell__drag"></div>
+                                </div>
+
+                                <div class="table-cell table-cell_hr table-cell-resizable" style="width: 140px;">
+                                    <div class="table-cell__inner sort section">
+                                        <span class="table-cell__text table-cell__text_hr">Каталожный номер</span>
+
+                                        <span class="table-cell__ico table-cell__ico_sort arr-down" data-sort="PROPERTY_CML2_ARTICLE" data-section_id=""></span>
+                                    </div>
+
+                                    <div class="table-cell__drag"></div>
+                                </div>
+
+                                <div class="table-cell table-cell_hr table-cell-resizable" data-cell="name" style="width: auto;">
+                                    <div class="table-cell__inner sort section">
+                                        <span class="table-cell__text table-cell__text_hr">Наименование</span>
+
+                                        <span class="table-cell__ico table-cell__ico_sort arr-down" data-sort="NAME" data-section_id=""></span>
+                                    </div>
+
+                                    <div class="table-cell__drag"></div>
+                                </div>
+
+                                <div class="table-cell table-cell_hr table-cell-resizable" style="width: 200px;">
+                                    <div class="table-cell__inner section">
+                                        <span class="table-cell__text table-cell__text_hr">Бренд</span>
+
+                                        <span class="table-cell__ico" data-section_id=""></span>
+                                    </div>
+
+                                    <div class="table-cell__drag"></div>
+                                </div>
+
+                                <div class="table-cell table-cell_hr table-cell-resizable" style="width: 70px;">
+                                    <div class="table-cell__inner">
+                                        <span class="table-cell__text table-cell__text_hr">Ед.</span>
+
+                                        <span class="table-cell__ico"></span>
+                                    </div>
+
+                                    <div class="table-cell__drag"></div>
+                                </div>
+
+                                <div class="table-cell table-cell_hr table-cell-resizable" style="width: 70px;">
+                                    <div class="table-cell__inner">
+                                        <span class="table-cell__text table-cell__text_hr">Ост.</span>
+
+                                        <span class="table-cell__ico"></span>
+                                    </div>
+
+                                    <div class="table-cell__drag"></div>
+                                </div>
+
+                                <div class="table-cell table-cell_hr table-cell-resizable" style="width: 70px;">
+                                    <div class="table-cell__inner">
+                                        <span class="table-cell__text table-cell__text_hr">Цена</span>
+
+                                        <span class="table-cell__ico"></span>
+                                    </div>
+                                </div>
+
+                                <div class="table-cell table-cell_hr table-cell-resizable" style="width: 74px;">
+                                    <div class="table-cell__inner">
+                                        <span class="table-cell__text">Кол-во</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="table-row">
+                                <div class="table-cell table-cell_filter"></div>
+
+                                <div class="table-cell table-cell_filter">
+                                    <div class="table-filter">
+                                        <input type="text" name="filter" class="table-filter__input filter" data-section_id="main" data-name="kod">
+
+                                        <button type="button" class="table-filter__ico close-inp clear_form">
+                                            <svg class=" close-inp clear_form" width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path class=" close-inp clear_form" d="M1.31396 1L9.31394 9M9.31396 1L1.31399 9"></path>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <div class="table-cell table-cell_filter">
+                                    <div class="table-filter">
+                                        <input type="text" name="filter" class="table-filter__input filter" data-section_id="main" data-name="oem">
+
+                                        <button type="button" class="table-filter__ico close-inp clear_form">
+                                            <svg class=" close-inp clear_form" width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path class=" close-inp clear_form" d="M1.31396 1L9.31394 9M9.31396 1L1.31399 9"></path>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <div class="table-cell table-cell_filter">
+                                    <div class="table-filter">
+                                        <input type="text" name="filter" class="table-filter__input filter" data-name="artikul" data-section_id="main">
+
+                                        <button type="button" class="table-filter__ico close-inp clear_form">
+                                            <svg class=" close-inp clear_form" width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path class=" close-inp clear_form" d="M1.31396 1L9.31394 9M9.31396 1L1.31399 9"></path>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <div class="table-cell table-cell_filter">
+                                    <div class="table-filter">
+                                        <input type="text" name="filter" class="table-filter__input filter" data-name="name" data-section_id="main">
+
+                                        <button type="button" class="table-filter__ico close-inp clear_form">
+                                            <svg class=" close-inp clear_form" width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path class=" close-inp clear_form" d="M1.31396 1L9.31394 9M9.31396 1L1.31399 9"></path>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <div class="table-cell table-cell_filter">
+                                    <div class="table-filter">
+                                        <input type="text" name="filter" class="table-filter__input filter-select" data-name="brand" data-section_id="main" id="filter-select-brand">
+
+                                        <button type="button" class="table-filter__ico close-inp clear_form">
+                                            <svg class=" close-inp clear_form" width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path class=" close-inp clear_form" d="M1.31396 1L9.31394 9M9.31396 1L1.31399 9"></path>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <div class="table-cell table-cell_filter"></div>
+
+                                <div class="table-cell table-cell_filter"></div>
+
+                                <div class="table-cell table-cell_filter"></div>
+
+                                <div class="table-cell table-cell_filter"></div>
+                            </div>
+                        </div>
+                    </div> <!-- end table-header -->
+
+                    <div class="table-body" data-simplebar="init" style="width: 100%;" data-width="785">
+                        <div class="table-body__inner">
+                            <div class="table-row  product-row tovar getProp" data-count_sum="4269"
+                                 data-img="" data-price="" data-id="5586" data-analog=""
+                                 data-section="16065" data-q="" data-bonus="0" data-new="0"
+                                 data-extrabonus="0" data-yy="N">
+                                <div class="table-cell" style="width: 80px;">
+                                    <div class="button-goods-wrap">
+                                        <button class="button-goods button-goods_photo">
+                                            <svg width="14" height="14" viewBox="0 0 14 14"
+                                                 fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M13.4533 3.34686C13.0887 2.98231 12.6489 2.79998 12.1336 2.79998H10.5002L10.1284 1.80837C10.036 1.57021 9.86716 1.3648 9.62154 1.19215C9.37603 1.01958 9.12449 0.933228 8.86682 0.933228H5.13339C4.87574 0.933228 4.62415 1.01958 4.37864 1.19215C4.13312 1.3648 3.96426 1.57021 3.87188 1.80837L3.50002 2.79998H1.86668C1.35131 2.79998 0.911463 2.98231 0.546832 3.34686C0.182277 3.71144 0 4.15134 0 4.66665V11.2001C0 11.7154 0.182277 12.1553 0.546832 12.5198C0.911463 12.8845 1.35133 13.0668 1.86668 13.0668H12.1334C12.6487 13.0668 13.0885 12.8845 13.4531 12.5198C13.8177 12.1553 14 11.7154 14 11.2001V4.66665C14.0001 4.15134 13.8178 3.71144 13.4533 3.34686ZM9.30786 10.2413C8.66863 10.8805 7.89942 11.2002 7.00004 11.2002C6.10066 11.2002 5.3315 10.8805 4.69221 10.2413C4.05293 9.60211 3.73335 8.83273 3.73335 7.93355C3.73335 7.03409 4.05303 6.26496 4.69221 5.62567C5.33142 4.98639 6.10068 4.66681 7.00004 4.66681C7.8994 4.66681 8.66863 4.98646 9.30786 5.62567C9.94712 6.26488 10.2668 7.03409 10.2668 7.93355C10.2668 8.83273 9.94715 9.60203 9.30786 10.2413Z"></path>
+                                                <path d="M7.00011 5.83337C6.42161 5.83337 5.92698 6.03877 5.5162 6.4496C5.10542 6.86038 4.90002 7.35494 4.90002 7.93357C4.90002 8.51197 5.10542 9.0066 5.5162 9.41738C5.92698 9.82809 6.42159 10.0335 7.00011 10.0335C7.57854 10.0335 8.07322 9.82809 8.484 9.41738C8.89479 9.0066 9.1002 8.51199 9.1002 7.93357C9.1002 7.35496 8.89479 6.86041 8.484 6.4496C8.07325 6.03879 7.57854 5.83337 7.00011 5.83337Z"></path>
+                                            </svg>
+                                        </button>
+
+                                        <button class="button-goods button-goods_interchange ">
+                                            <svg width="14" height="14" viewBox="0 0 14 14"
+                                                 fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M13.8425 10.1636L11.2175 7.97613C11.0871 7.86676 10.9051 7.84488 10.752 7.91576C10.598 7.98838 10.5 8.14238 10.5 8.31213V9.62463H9.76762C9.16037 9.62463 8.60563 9.31663 8.28362 8.80213L5.45038 4.26963C4.80725 3.23976 3.69775 2.62463 2.48237 2.62463H0V4.37463H2.48237C3.08962 4.37463 3.64438 4.68263 3.96637 5.19713L6.79962 9.72963C7.44362 10.7595 8.55313 11.3746 9.76762 11.3746H10.5V12.6871C10.5 12.8569 10.598 13.0109 10.752 13.0835C10.8106 13.1106 10.8745 13.1246 10.9375 13.1246C11.0381 13.1246 11.1379 13.0905 11.2175 13.0231L13.8425 10.8356C13.9431 10.7525 14 10.6291 14 10.4996C14 10.3701 13.9431 10.2468 13.8425 10.1636Z"></path>
+                                                <path d="M13.8426 3.16372L11.2176 0.976216C11.0872 0.867716 10.9052 0.844966 10.7521 0.916716C10.5981 0.987591 10.5001 1.14247 10.5001 1.31222V2.62472H9.76773C8.55236 2.62472 7.44286 3.23984 6.79973 4.26972L6.64136 4.52347L7.67298 6.17459L8.28373 5.19722C8.60573 4.68272 9.16048 4.37472 9.76773 4.37472H10.5001V5.68722C10.5001 5.85697 10.5981 6.01184 10.7521 6.08359C10.8107 6.11072 10.8746 6.12472 10.9376 6.12472C11.0382 6.12472 11.138 6.08972 11.2176 6.02322L13.8426 3.83572C13.9432 3.75259 14.0001 3.62922 14.0001 3.49972C14.0001 3.37022 13.9432 3.24684 13.8426 3.16372Z"></path>
+                                                <path d="M4.57713 7.82471L3.96725 8.80208C3.64525 9.31658 3.08962 9.62458 2.48237 9.62458H0V11.3746H2.48237C3.69687 11.3746 4.80638 10.7595 5.45038 9.72958L5.60875 9.47583L4.57713 7.82471Z"></path>
+                                            </svg>
+                                        </button>
+
+                                        <button class="button-goods button-goods_favorite card-item-favorite_active"
+                                        "="">
+                                        <svg class="card-item-favorite__ico" width="15"
+                                             viewBox="0 0 22 20" fill="none"
+                                             xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M10.2268 18.5031C10.4408 18.6904 10.7153 18.7936 11 18.7936C11.2846 18.7936 11.5592 18.6904 11.773 18.5034C12.5828 17.7952 13.363 17.1302 14.0515 16.5437L14.0517 16.5434C16.0662 14.8266 17.8059 13.344 19.0165 11.8832C20.3698 10.2503 21 8.70203 21 7.01059C21 5.36722 20.4366 3.8511 19.4135 2.74133C18.3782 1.61844 16.9575 1 15.413 1C14.2585 1 13.2012 1.36499 12.2706 2.08475C11.8008 2.44806 11.3752 2.8927 11 3.41135C10.6249 2.8927 10.1992 2.44806 9.72955 2.08475C8.79892 1.36499 7.74164 1 6.58716 1C5.04251 1 3.62192 1.61844 2.58661 2.74133C1.56351 3.8511 1 5.36722 1 7.01059C1 8.70203 1.63034 10.2503 2.98364 11.8833C4.19427 13.3441 5.93423 14.8269 7.94916 16.544L7.95267 16.547C8.63992 17.1327 9.41888 17.7966 10.2268 18.5031Z"></path>
+                                        </svg>
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <div class="table-cell" style="width: 100px;">
+                                    <div class="table-cell__inner"></div>
+                                </div>
+
+                                <div class="table-cell" style="width: 100px;">
+                                    <div class="table-cell__inner"></div>
+                                </div>
+
+                                <div class="table-cell" style="width: 140px;">
+                                    <div class="table-cell__inner"></div>
+                                </div>
+
+                                <div class="table-cell col_4 name_5586" style="width: auto;">
+                                    <div class="table-cell__inner">
+
+
+                                        product_test
+                                    </div>
+                                </div>
+
+                                <div class="table-cell" style="width: 200px;">
+                                    <div class="table-cell__inner"></div>
+                                </div>
+
+                                <div class="table-cell" style="width: 70px;">
+                                    <div class="table-cell__inner"></div>
+                                </div>
+
+                                <div class="table-cell col_7 quantity_5586"
+                                     data-admission="не указана" style="width: 70px;">
+                                    <div class="table-cell__inner"></div>
+                                </div>
+
+                                <div class="table-cell col_8 price_5586" style="width: 70px;">
+                                    <div class="table-cell__inner"></div>
+                                </div>
+
+                                <div class="table-cell" style="width: 74px;">
+                                    <div class="table-cell__inner">
+                                        <div class="quantity">
+                                            <button class="quantity__btn minus" type="button">
+                                                <svg height="2" width="10" viewBox="0 0 10 2"
+                                                     fill="none" class="quantity__ico">
+                                                    <rect width="10" height="1.42857"
+                                                          rx="0.714286"></rect>
+                                                </svg>
+                                            </button>
+
+                                            <input class="quantity__input" min="0" name="quantity"
+                                                   data-quantity="" data-q="" type="text" value="0">
+
+                                            <button class="quantity__btn plus" type="button">
+                                                <svg width="10" height="10" viewBox="0 0 10 10"
+                                                     fill="none" class="quantity__ico">
+                                                    <path d="M0 5C0 4.60551 0.319797 4.28571 0.714286 4.28571H9.28571C9.6802 4.28571 10 4.60551 10 5C10 5.39449 9.6802 5.71429 9.28571 5.71429H0.714286C0.319797 5.71429 0 5.39449 0 5Z"></path>
+                                                    <path d="M5 10C4.60551 10 4.28571 9.6802 4.28571 9.28571V0.714286C4.28571 0.319797 4.60551 0 5 0C5.39449 0 5.71429 0.319797 5.71429 0.714286V9.28571C5.71429 9.6802 5.39449 10 5 10Z"></path>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <input class="hidden-count" type="hidden" value="1">
+                                <input class="hidden-count_sum" type="hidden" value="4269">
+                            </div> <!-- end table-row -->
+                            <div class="table-row  product-row tovar getProp" data-count_sum="4269"
+                                 data-img="/upload/iblock/763/763ae29561f85c909ae08ade17c8a8a0.jpeg"
+                                 data-price="16.98" data-id="3502"
+                                 data-analog="011974,011919,031293,031294" data-section="15942"
+                                 data-q="30" data-bonus="0.10188" data-new="0" data-extrabonus="0"
+                                 data-yy="Y">
+                                <div class="table-cell" style="width: 80px;">
+                                    <div class="button-goods-wrap">
+                                        <button class="button-goods button-goods_photo">
+                                            <svg width="14" height="14" viewBox="0 0 14 14"
+                                                 fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M13.4533 3.34686C13.0887 2.98231 12.6489 2.79998 12.1336 2.79998H10.5002L10.1284 1.80837C10.036 1.57021 9.86716 1.3648 9.62154 1.19215C9.37603 1.01958 9.12449 0.933228 8.86682 0.933228H5.13339C4.87574 0.933228 4.62415 1.01958 4.37864 1.19215C4.13312 1.3648 3.96426 1.57021 3.87188 1.80837L3.50002 2.79998H1.86668C1.35131 2.79998 0.911463 2.98231 0.546832 3.34686C0.182277 3.71144 0 4.15134 0 4.66665V11.2001C0 11.7154 0.182277 12.1553 0.546832 12.5198C0.911463 12.8845 1.35133 13.0668 1.86668 13.0668H12.1334C12.6487 13.0668 13.0885 12.8845 13.4531 12.5198C13.8177 12.1553 14 11.7154 14 11.2001V4.66665C14.0001 4.15134 13.8178 3.71144 13.4533 3.34686ZM9.30786 10.2413C8.66863 10.8805 7.89942 11.2002 7.00004 11.2002C6.10066 11.2002 5.3315 10.8805 4.69221 10.2413C4.05293 9.60211 3.73335 8.83273 3.73335 7.93355C3.73335 7.03409 4.05303 6.26496 4.69221 5.62567C5.33142 4.98639 6.10068 4.66681 7.00004 4.66681C7.8994 4.66681 8.66863 4.98646 9.30786 5.62567C9.94712 6.26488 10.2668 7.03409 10.2668 7.93355C10.2668 8.83273 9.94715 9.60203 9.30786 10.2413Z"></path>
+                                                <path d="M7.00011 5.83337C6.42161 5.83337 5.92698 6.03877 5.5162 6.4496C5.10542 6.86038 4.90002 7.35494 4.90002 7.93357C4.90002 8.51197 5.10542 9.0066 5.5162 9.41738C5.92698 9.82809 6.42159 10.0335 7.00011 10.0335C7.57854 10.0335 8.07322 9.82809 8.484 9.41738C8.89479 9.0066 9.1002 8.51199 9.1002 7.93357C9.1002 7.35496 8.89479 6.86041 8.484 6.4496C8.07325 6.03879 7.57854 5.83337 7.00011 5.83337Z"></path>
+                                            </svg>
+                                        </button>
+
+                                        <button class="button-goods button-goods_interchange have-analogs">
+                                            <svg width="14" height="14" viewBox="0 0 14 14"
+                                                 fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M13.8425 10.1636L11.2175 7.97613C11.0871 7.86676 10.9051 7.84488 10.752 7.91576C10.598 7.98838 10.5 8.14238 10.5 8.31213V9.62463H9.76762C9.16037 9.62463 8.60563 9.31663 8.28362 8.80213L5.45038 4.26963C4.80725 3.23976 3.69775 2.62463 2.48237 2.62463H0V4.37463H2.48237C3.08962 4.37463 3.64438 4.68263 3.96637 5.19713L6.79962 9.72963C7.44362 10.7595 8.55313 11.3746 9.76762 11.3746H10.5V12.6871C10.5 12.8569 10.598 13.0109 10.752 13.0835C10.8106 13.1106 10.8745 13.1246 10.9375 13.1246C11.0381 13.1246 11.1379 13.0905 11.2175 13.0231L13.8425 10.8356C13.9431 10.7525 14 10.6291 14 10.4996C14 10.3701 13.9431 10.2468 13.8425 10.1636Z"></path>
+                                                <path d="M13.8426 3.16372L11.2176 0.976216C11.0872 0.867716 10.9052 0.844966 10.7521 0.916716C10.5981 0.987591 10.5001 1.14247 10.5001 1.31222V2.62472H9.76773C8.55236 2.62472 7.44286 3.23984 6.79973 4.26972L6.64136 4.52347L7.67298 6.17459L8.28373 5.19722C8.60573 4.68272 9.16048 4.37472 9.76773 4.37472H10.5001V5.68722C10.5001 5.85697 10.5981 6.01184 10.7521 6.08359C10.8107 6.11072 10.8746 6.12472 10.9376 6.12472C11.0382 6.12472 11.138 6.08972 11.2176 6.02322L13.8426 3.83572C13.9432 3.75259 14.0001 3.62922 14.0001 3.49972C14.0001 3.37022 13.9432 3.24684 13.8426 3.16372Z"></path>
+                                                <path d="M4.57713 7.82471L3.96725 8.80208C3.64525 9.31658 3.08962 9.62458 2.48237 9.62458H0V11.3746H2.48237C3.69687 11.3746 4.80638 10.7595 5.45038 9.72958L5.60875 9.47583L4.57713 7.82471Z"></path>
+                                            </svg>
+                                        </button>
+
+                                        <button class="button-goods button-goods_favorite "
+                                        "="">
+                                        <svg class="card-item-favorite__ico" width="15"
+                                             viewBox="0 0 22 20" fill="none"
+                                             xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M10.2268 18.5031C10.4408 18.6904 10.7153 18.7936 11 18.7936C11.2846 18.7936 11.5592 18.6904 11.773 18.5034C12.5828 17.7952 13.363 17.1302 14.0515 16.5437L14.0517 16.5434C16.0662 14.8266 17.8059 13.344 19.0165 11.8832C20.3698 10.2503 21 8.70203 21 7.01059C21 5.36722 20.4366 3.8511 19.4135 2.74133C18.3782 1.61844 16.9575 1 15.413 1C14.2585 1 13.2012 1.36499 12.2706 2.08475C11.8008 2.44806 11.3752 2.8927 11 3.41135C10.6249 2.8927 10.1992 2.44806 9.72955 2.08475C8.79892 1.36499 7.74164 1 6.58716 1C5.04251 1 3.62192 1.61844 2.58661 2.74133C1.56351 3.8511 1 5.36722 1 7.01059C1 8.70203 1.63034 10.2503 2.98364 11.8833C4.19427 13.3441 5.93423 14.8269 7.94916 16.544L7.95267 16.547C8.63992 17.1327 9.41888 17.7966 10.2268 18.5031Z"></path>
+                                        </svg>
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <div class="table-cell" style="width: 100px;">
+                                    <div class="table-cell__inner">031289</div>
+                                </div>
+
+                                <div class="table-cell" style="width: 100px;">
+                                    <div class="table-cell__inner"></div>
+                                </div>
+
+                                <div class="table-cell" style="width: 140px;">
+                                    <div class="table-cell__inner">031289</div>
+                                </div>
+
+                                <div class="table-cell col_4 name_3502">
+                                    <div class="table-cell__inner">
+
+
+                                        Автомобильный освежитель воздуха AIR SURF Black (черный)
+                                        (ароматизатор - подвеска с гелем) Dr. Marcus
+                                    </div>
+                                </div>
+
+                                <div class="table-cell" style="width: 200px;">
+                                    <div class="table-cell__inner">Doctor Marcus, Польша</div>
+                                </div>
+
+                                <div class="table-cell" style="width: 70px;">
+                                    <div class="table-cell__inner">шт</div>
+                                </div>
+
+                                <div class="table-cell col_7 quantity_3502"
+                                     data-admission="не указана" style="width: 70px;">
+                                    <div class="table-cell__inner">&gt;10</div>
+                                </div>
+
+                                <div class="table-cell col_8 price_3502" style="width: 70px;">
+                                    <div class="table-cell__inner">16.98</div>
+                                </div>
+
+                                <div class="table-cell" style="width: 74px;">
+                                    <div class="table-cell__inner">
+                                        <div class="quantity">
+                                            <button class="quantity__btn minus" type="button">
+                                                <svg height="2" width="10" viewBox="0 0 10 2"
+                                                     fill="none" class="quantity__ico">
+                                                    <rect width="10" height="1.42857"
+                                                          rx="0.714286"></rect>
+                                                </svg>
+                                            </button>
+
+                                            <input class="quantity__input" min="0" name="quantity"
+                                                   data-quantity="30" data-q="30" type="text"
+                                                   value="0">
+
+                                            <button class="quantity__btn plus" type="button">
+                                                <svg width="10" height="10" viewBox="0 0 10 10"
+                                                     fill="none" class="quantity__ico">
+                                                    <path d="M0 5C0 4.60551 0.319797 4.28571 0.714286 4.28571H9.28571C9.6802 4.28571 10 4.60551 10 5C10 5.39449 9.6802 5.71429 9.28571 5.71429H0.714286C0.319797 5.71429 0 5.39449 0 5Z"></path>
+                                                    <path d="M5 10C4.60551 10 4.28571 9.6802 4.28571 9.28571V0.714286C4.28571 0.319797 4.60551 0 5 0C5.39449 0 5.71429 0.319797 5.71429 0.714286V9.28571C5.71429 9.6802 5.39449 10 5 10Z"></path>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <input class="hidden-count" type="hidden" value="1">
+                                <input class="hidden-count_sum" type="hidden" value="4269">
+                            </div> <!-- end table-row -->
+                            <div class="table-row  product-row tovar getProp" data-count_sum="4269"
+                                 data-img="/upload/iblock/c91/c91756d046942c9433e8aa4710596d56.jpeg"
+                                 data-price="16.98" data-id="3503" data-analog=""
+                                 data-section="15942" data-q="23" data-bonus="0.10188" data-new="0"
+                                 data-extrabonus="0" data-yy="Y">
+                                <div class="table-cell" style="width: 80px;">
+                                    <div class="button-goods-wrap">
+                                        <button class="button-goods button-goods_photo">
+                                            <svg width="14" height="14" viewBox="0 0 14 14"
+                                                 fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M13.4533 3.34686C13.0887 2.98231 12.6489 2.79998 12.1336 2.79998H10.5002L10.1284 1.80837C10.036 1.57021 9.86716 1.3648 9.62154 1.19215C9.37603 1.01958 9.12449 0.933228 8.86682 0.933228H5.13339C4.87574 0.933228 4.62415 1.01958 4.37864 1.19215C4.13312 1.3648 3.96426 1.57021 3.87188 1.80837L3.50002 2.79998H1.86668C1.35131 2.79998 0.911463 2.98231 0.546832 3.34686C0.182277 3.71144 0 4.15134 0 4.66665V11.2001C0 11.7154 0.182277 12.1553 0.546832 12.5198C0.911463 12.8845 1.35133 13.0668 1.86668 13.0668H12.1334C12.6487 13.0668 13.0885 12.8845 13.4531 12.5198C13.8177 12.1553 14 11.7154 14 11.2001V4.66665C14.0001 4.15134 13.8178 3.71144 13.4533 3.34686ZM9.30786 10.2413C8.66863 10.8805 7.89942 11.2002 7.00004 11.2002C6.10066 11.2002 5.3315 10.8805 4.69221 10.2413C4.05293 9.60211 3.73335 8.83273 3.73335 7.93355C3.73335 7.03409 4.05303 6.26496 4.69221 5.62567C5.33142 4.98639 6.10068 4.66681 7.00004 4.66681C7.8994 4.66681 8.66863 4.98646 9.30786 5.62567C9.94712 6.26488 10.2668 7.03409 10.2668 7.93355C10.2668 8.83273 9.94715 9.60203 9.30786 10.2413Z"></path>
+                                                <path d="M7.00011 5.83337C6.42161 5.83337 5.92698 6.03877 5.5162 6.4496C5.10542 6.86038 4.90002 7.35494 4.90002 7.93357C4.90002 8.51197 5.10542 9.0066 5.5162 9.41738C5.92698 9.82809 6.42159 10.0335 7.00011 10.0335C7.57854 10.0335 8.07322 9.82809 8.484 9.41738C8.89479 9.0066 9.1002 8.51199 9.1002 7.93357C9.1002 7.35496 8.89479 6.86041 8.484 6.4496C8.07325 6.03879 7.57854 5.83337 7.00011 5.83337Z"></path>
+                                            </svg>
+                                        </button>
+
+                                        <button class="button-goods button-goods_interchange ">
+                                            <svg width="14" height="14" viewBox="0 0 14 14"
+                                                 fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M13.8425 10.1636L11.2175 7.97613C11.0871 7.86676 10.9051 7.84488 10.752 7.91576C10.598 7.98838 10.5 8.14238 10.5 8.31213V9.62463H9.76762C9.16037 9.62463 8.60563 9.31663 8.28362 8.80213L5.45038 4.26963C4.80725 3.23976 3.69775 2.62463 2.48237 2.62463H0V4.37463H2.48237C3.08962 4.37463 3.64438 4.68263 3.96637 5.19713L6.79962 9.72963C7.44362 10.7595 8.55313 11.3746 9.76762 11.3746H10.5V12.6871C10.5 12.8569 10.598 13.0109 10.752 13.0835C10.8106 13.1106 10.8745 13.1246 10.9375 13.1246C11.0381 13.1246 11.1379 13.0905 11.2175 13.0231L13.8425 10.8356C13.9431 10.7525 14 10.6291 14 10.4996C14 10.3701 13.9431 10.2468 13.8425 10.1636Z"></path>
+                                                <path d="M13.8426 3.16372L11.2176 0.976216C11.0872 0.867716 10.9052 0.844966 10.7521 0.916716C10.5981 0.987591 10.5001 1.14247 10.5001 1.31222V2.62472H9.76773C8.55236 2.62472 7.44286 3.23984 6.79973 4.26972L6.64136 4.52347L7.67298 6.17459L8.28373 5.19722C8.60573 4.68272 9.16048 4.37472 9.76773 4.37472H10.5001V5.68722C10.5001 5.85697 10.5981 6.01184 10.7521 6.08359C10.8107 6.11072 10.8746 6.12472 10.9376 6.12472C11.0382 6.12472 11.138 6.08972 11.2176 6.02322L13.8426 3.83572C13.9432 3.75259 14.0001 3.62922 14.0001 3.49972C14.0001 3.37022 13.9432 3.24684 13.8426 3.16372Z"></path>
+                                                <path d="M4.57713 7.82471L3.96725 8.80208C3.64525 9.31658 3.08962 9.62458 2.48237 9.62458H0V11.3746H2.48237C3.69687 11.3746 4.80638 10.7595 5.45038 9.72958L5.60875 9.47583L4.57713 7.82471Z"></path>
+                                            </svg>
+                                        </button>
+
+                                        <button class="button-goods button-goods_favorite card-item-favorite_active"
+                                        "="">
+                                        <svg class="card-item-favorite__ico" width="15"
+                                             viewBox="0 0 22 20" fill="none"
+                                             xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M10.2268 18.5031C10.4408 18.6904 10.7153 18.7936 11 18.7936C11.2846 18.7936 11.5592 18.6904 11.773 18.5034C12.5828 17.7952 13.363 17.1302 14.0515 16.5437L14.0517 16.5434C16.0662 14.8266 17.8059 13.344 19.0165 11.8832C20.3698 10.2503 21 8.70203 21 7.01059C21 5.36722 20.4366 3.8511 19.4135 2.74133C18.3782 1.61844 16.9575 1 15.413 1C14.2585 1 13.2012 1.36499 12.2706 2.08475C11.8008 2.44806 11.3752 2.8927 11 3.41135C10.6249 2.8927 10.1992 2.44806 9.72955 2.08475C8.79892 1.36499 7.74164 1 6.58716 1C5.04251 1 3.62192 1.61844 2.58661 2.74133C1.56351 3.8511 1 5.36722 1 7.01059C1 8.70203 1.63034 10.2503 2.98364 11.8833C4.19427 13.3441 5.93423 14.8269 7.94916 16.544L7.95267 16.547C8.63992 17.1327 9.41888 17.7966 10.2268 18.5031Z"></path>
+                                        </svg>
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <div class="table-cell" style="width: 100px;">
+                                    <div class="table-cell__inner">031290</div>
+                                </div>
+
+                                <div class="table-cell" style="width: 100px;">
+                                    <div class="table-cell__inner"></div>
+                                </div>
+
+                                <div class="table-cell" style="width: 140px;">
+                                    <div class="table-cell__inner">031290</div>
+                                </div>
+
+                                <div class="table-cell col_4 name_3503">
+                                    <div class="table-cell__inner">
+
+
+                                        Автомобильный освежитель воздуха AIR SURF Lemon (лимон)
+                                        (ароматизатор - подвеска с гелем) Dr. Marcus
+                                    </div>
+                                </div>
+
+                                <div class="table-cell" style="width: 200px;">
+                                    <div class="table-cell__inner">Doctor Marcus, Польша</div>
+                                </div>
+
+                                <div class="table-cell" style="width: 70px;">
+                                    <div class="table-cell__inner">шт</div>
+                                </div>
+
+                                <div class="table-cell col_7 quantity_3503"
+                                     data-admission="не указана" style="width: 70px;">
+                                    <div class="table-cell__inner">&gt;10</div>
+                                </div>
+
+                                <div class="table-cell col_8 price_3503" style="width: 70px;">
+                                    <div class="table-cell__inner">16.98</div>
+                                </div>
+
+                                <div class="table-cell" style="width: 74px;">
+                                    <div class="table-cell__inner">
+                                        <div class="quantity">
+                                            <button class="quantity__btn minus" type="button">
+                                                <svg height="2" width="10" viewBox="0 0 10 2"
+                                                     fill="none" class="quantity__ico">
+                                                    <rect width="10" height="1.42857"
+                                                          rx="0.714286"></rect>
+                                                </svg>
+                                            </button>
+
+                                            <input class="quantity__input" min="0" name="quantity"
+                                                   data-quantity="23" data-q="23" type="text"
+                                                   value="0">
+
+                                            <button class="quantity__btn plus" type="button">
+                                                <svg width="10" height="10" viewBox="0 0 10 10"
+                                                     fill="none" class="quantity__ico">
+                                                    <path d="M0 5C0 4.60551 0.319797 4.28571 0.714286 4.28571H9.28571C9.6802 4.28571 10 4.60551 10 5C10 5.39449 9.6802 5.71429 9.28571 5.71429H0.714286C0.319797 5.71429 0 5.39449 0 5Z"></path>
+                                                    <path d="M5 10C4.60551 10 4.28571 9.6802 4.28571 9.28571V0.714286C4.28571 0.319797 4.60551 0 5 0C5.39449 0 5.71429 0.319797 5.71429 0.714286V9.28571C5.71429 9.6802 5.39449 10 5 10Z"></path>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <input class="hidden-count" type="hidden" value="1">
+                                <input class="hidden-count_sum" type="hidden" value="4269">
+                            </div> <!-- end table-row -->
+                        </div> <!-- end table-body__inner -->
+                    </div> <!-- end table-body table-body_first -->
+                </div>
+            </div>
 
             <div class="bonus__content" data-content="bonus__content">
                 <div class="bonus-info">
@@ -32,168 +506,819 @@
                     </div>
 
                     <div class="bonus-info__hold">
-                        <div class="bonus-card" data-container="bonus-card">
-                            <div class="bonus-card-title" data-button="bonus-card">
-                                <span class="bonus-card-title__ico">
-                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <circle cx="10" cy="10" r="10" fill="#E30613"/>
-                                        <path d="M6.59986 14L12.6024 6H13.3952L7.3978 14H6.59986ZM8.15971 10C7.66207 10 7.26739 9.8284 6.97567 9.4852C6.68395 9.142 6.53809 8.67868 6.53809 8.09524C6.53809 7.50837 6.68395 7.04505 6.97567 6.70528C7.26739 6.36208 7.66207 6.19048 8.15971 6.19048C8.65392 6.19048 9.04688 6.36208 9.3386 6.70528C9.63032 7.04505 9.77618 7.50837 9.77618 8.09524C9.77618 8.67868 9.63032 9.142 9.3386 9.4852C9.04688 9.8284 8.65392 10 8.15971 10ZM8.15971 9.49035C8.42054 9.49035 8.62818 9.36508 8.78262 9.11454C8.93706 8.86057 9.01428 8.52081 9.01428 8.09524C9.01428 7.66624 8.93706 7.32647 8.78262 7.07593C8.62818 6.82196 8.42054 6.69498 8.15971 6.69498C7.89544 6.69498 7.68609 6.82196 7.53165 7.07593C7.37721 7.32647 7.29999 7.66624 7.29999 8.09524C7.29999 8.52081 7.37721 8.86057 7.53165 9.11454C7.68609 9.36508 7.89544 9.49035 8.15971 9.49035ZM11.8405 13.8095C11.3429 13.8095 10.9482 13.6379 10.6565 13.2947C10.3682 12.9515 10.2241 12.4882 10.2241 11.9048C10.2241 11.3213 10.3682 10.858 10.6565 10.5148C10.9482 10.1716 11.3429 10 11.8405 10C12.3382 10 12.7329 10.1716 13.0246 10.5148C13.3163 10.858 13.4622 11.3213 13.4622 11.9048C13.4622 12.4882 13.3163 12.9515 13.0246 13.2947C12.7329 13.6379 12.3382 13.8095 11.8405 13.8095ZM11.8405 13.2999C12.1048 13.2999 12.3141 13.1746 12.4686 12.9241C12.623 12.6735 12.7002 12.3338 12.7002 11.9048C12.7002 11.4758 12.623 11.136 12.4686 10.8855C12.3141 10.6315 12.1048 10.5045 11.8405 10.5045C11.5797 10.5045 11.3721 10.6315 11.2176 10.8855C11.0632 11.136 10.986 11.4758 10.986 11.9048C10.986 12.3338 11.0632 12.6735 11.2176 12.9241C11.3721 13.1746 11.5797 13.2999 11.8405 13.2999Z" fill="white"/>
-                                    </svg>
-                                </span>
+                        <div class="bonus-scroll">
+                            <!-- bonus -1 -->
+                            <div class="bonus-card" data-container="bonus-card">
+                                <div class="bonus-card-title" data-button="bonus-card">
+                                    <span class="bonus-card-title__ico">
+                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="10" cy="10" r="10" fill="#E30613"/>
+                                            <path d="M6.59986 14L12.6024 6H13.3952L7.3978 14H6.59986ZM8.15971 10C7.66207 10 7.26739 9.8284 6.97567 9.4852C6.68395 9.142 6.53809 8.67868 6.53809 8.09524C6.53809 7.50837 6.68395 7.04505 6.97567 6.70528C7.26739 6.36208 7.66207 6.19048 8.15971 6.19048C8.65392 6.19048 9.04688 6.36208 9.3386 6.70528C9.63032 7.04505 9.77618 7.50837 9.77618 8.09524C9.77618 8.67868 9.63032 9.142 9.3386 9.4852C9.04688 9.8284 8.65392 10 8.15971 10ZM8.15971 9.49035C8.42054 9.49035 8.62818 9.36508 8.78262 9.11454C8.93706 8.86057 9.01428 8.52081 9.01428 8.09524C9.01428 7.66624 8.93706 7.32647 8.78262 7.07593C8.62818 6.82196 8.42054 6.69498 8.15971 6.69498C7.89544 6.69498 7.68609 6.82196 7.53165 7.07593C7.37721 7.32647 7.29999 7.66624 7.29999 8.09524C7.29999 8.52081 7.37721 8.86057 7.53165 9.11454C7.68609 9.36508 7.89544 9.49035 8.15971 9.49035ZM11.8405 13.8095C11.3429 13.8095 10.9482 13.6379 10.6565 13.2947C10.3682 12.9515 10.2241 12.4882 10.2241 11.9048C10.2241 11.3213 10.3682 10.858 10.6565 10.5148C10.9482 10.1716 11.3429 10 11.8405 10C12.3382 10 12.7329 10.1716 13.0246 10.5148C13.3163 10.858 13.4622 11.3213 13.4622 11.9048C13.4622 12.4882 13.3163 12.9515 13.0246 13.2947C12.7329 13.6379 12.3382 13.8095 11.8405 13.8095ZM11.8405 13.2999C12.1048 13.2999 12.3141 13.1746 12.4686 12.9241C12.623 12.6735 12.7002 12.3338 12.7002 11.9048C12.7002 11.4758 12.623 11.136 12.4686 10.8855C12.3141 10.6315 12.1048 10.5045 11.8405 10.5045C11.5797 10.5045 11.3721 10.6315 11.2176 10.8855C11.0632 11.136 10.986 11.4758 10.986 11.9048C10.986 12.3338 11.0632 12.6735 11.2176 12.9241C11.3721 13.1746 11.5797 13.2999 11.8405 13.2999Z" fill="white"/>
+                                        </svg>
+                                    </span>
 
-                                <span class="bonus-card-title__text">Возьми на сумму - получи бонусы</span>
+                                    <span class="bonus-card-title__text">Возьми на сумму - получи бонусы</span>
 
-                                <span class="bonus-card-title__arrow" data-indicator="bonus-card">
-                                    <svg width="14" height="9" viewBox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M13 8.14509L7 2L1 8.14509" stroke="#344E9F" stroke-width="2"/>
-                                    </svg>
-                                </span>
-                            </div>
+                                    <span class="bonus-card-title__arrow" data-indicator="bonus-card">
+                                        <svg width="14" height="9" viewBox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M13 8.14509L7 2L1 8.14509" stroke="#344E9F" stroke-width="2"/>
+                                        </svg>
+                                    </span>
+                                </div>
 
-                            <div class="bonus-card-content" data-box="bonus-card" data-card="bonus">
-                                <div class="bonus-card-content__scale">
-                                    <div class="scale" data-scale="bonus" data-min="5000" data-max="10000">
-                                        <div class="scale__inner">
-                                            <div class="scale-mark" data-mark data-position="5000">
-                                                <span class="scale-mark__text scale-mark__text_top scale-mark__text_left">5000</span>
+                                <div class="bonus-card-content" data-box="bonus-card" data-card="bonus">
+                                    <div class="bonus-card-content__scale">
+                                        <div class="scale" data-scale="bonus" data-min="5000" data-max="10000">
+                                            <div class="scale__inner">
+                                                <div class="scale-mark" data-mark data-position="5000">
+                                                    <span class="scale-mark__text scale-mark__text_top scale-mark__text_left">5000</span>
 
-                                                <span class="scale-mark__line"></span>
+                                                    <span class="scale-mark__line"></span>
 
-                                                <span class="scale-mark__text scale-mark__text_bottom scale-mark__text_left" data-slave="bonus">1%</span>
-                                            </div>
+                                                    <span class="scale-mark__text scale-mark__text_bottom scale-mark__text_left" data-slave="bonus">1%</span>
+                                                </div>
 
-                                            <div class="scale-mark" data-mark data-position="7000">
-                                                <span class="scale-mark__text scale-mark__text_top scale-mark__text_center">7000</span>
+                                                <div class="scale-mark" data-mark data-position="7000">
+                                                    <span class="scale-mark__text scale-mark__text_top scale-mark__text_center">7000</span>
 
-                                                <span class="scale-mark__line"></span>
+                                                    <span class="scale-mark__line"></span>
 
-                                                <span class="scale-mark__text scale-mark__text_bottom scale-mark__text_center" data-slave="bonus">1,5%</span>
-                                            </div>
+                                                    <span class="scale-mark__text scale-mark__text_bottom scale-mark__text_center" data-slave="bonus">1,5%</span>
+                                                </div>
 
-                                            <div class="scale-mark" data-mark data-position="10000">
-                                                <span class="scale-mark__text scale-mark__text_top scale-mark__text_right">10000</span>
+                                                <div class="scale-mark" data-mark data-position="10000">
+                                                    <span class="scale-mark__text scale-mark__text_top scale-mark__text_right">10000</span>
 
-                                                <span class="scale-mark__line"></span>
+                                                    <span class="scale-mark__line"></span>
 
-                                                <span class="scale-mark__text scale-mark__text_bottom scale-mark__text_right" data-slave="bonus">2%</span>
-                                            </div>
+                                                    <span class="scale-mark__text scale-mark__text_bottom scale-mark__text_right" data-slave="bonus">2%</span>
+                                                </div>
 
-                                            <div class="scale-track" >
-                                                <span class="scale-track__band" data-band="scale-track__band">
-                                                    <span class="scale-track__pointer" data-pointer="scale-track__pointer"></span>
-                                                </span>
+                                                <div class="scale-track" >
+                                                    <span class="scale-track__band" data-band="scale-track__band">
+                                                        <span class="scale-track__pointer" data-pointer="scale-track__pointer"></span>
+                                                    </span>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
 
-                                <div class="bonus-card-content__button">
-                                    <button class="bonus-button bonus-button_blue">Подобрать товары</button>
-                                </div>
-
-                                <div class="bonus-card-content__data">
-                                    <div class="bonus-row">
-                                        <span class="bonus-row__text-left">Мой чек</span>
-
-                                        <span class="bonus-row__text-right bonus-row__text-right_blue" data-leading="7132">7 132 грн</span>
+                                    <div class="bonus-card-content__button">
+                                        <button class="bonus-button bonus-button_blue">Подобрать товары</button>
                                     </div>
 
-                                    <div class="bonus-row">
-                                        <span class="bonus-row__text-left">Выгода</span>
+                                    <div class="bonus-card-content__data">
+                                        <div class="bonus-row">
+                                            <span class="bonus-row__text-left">Мой чек</span>
 
-                                        <span class="bonus-row__text-right bonus-row__text-right_red">1 234 грн</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="bonus-card" data-container="bonus-card">
-                            <div class="bonus-card-title" data-button="bonus-card">
-                                <span class="bonus-card-title__ico">
-                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <circle cx="10" cy="10" r="10" fill="#344E9F"/>
-                                        <path d="M5.625 10.3066V14.0566C5.625 14.4016 5.90562 14.6816 6.25 14.6816H9.375V10.3066H5.625Z" fill="white"/>
-                                        <path d="M14.375 7.80657H12.3975C12.5394 7.7097 12.6613 7.61345 12.7463 7.5272C13.2506 7.02032 13.2506 6.19532 12.7463 5.68845C12.2562 5.1947 11.4025 5.19595 10.9131 5.68845C10.6419 5.96032 9.92313 7.0672 10.0225 7.80657H9.9775C10.0763 7.0672 9.3575 5.96032 9.08687 5.68845C8.59687 5.19595 7.74312 5.19595 7.25375 5.68845C6.75 6.19532 6.75 7.02032 7.25312 7.5272C7.33875 7.61345 7.46062 7.7097 7.6025 7.80657H5.625C5.28062 7.80657 5 8.0872 5 8.43157V9.36907C5 9.54157 5.14 9.68157 5.3125 9.68157H9.375V8.43157H10.625V9.68157H14.6875C14.86 9.68157 15 9.54157 15 9.36907V8.43157C15 8.0872 14.72 7.80657 14.375 7.80657ZM9.33813 7.78595C9.33813 7.78595 9.31187 7.80657 9.2225 7.80657C8.79063 7.80657 7.96625 7.35782 7.69688 7.08657C7.435 6.82282 7.435 6.39282 7.69688 6.12907C7.82375 6.00157 7.99187 5.93157 8.17062 5.93157C8.34875 5.93157 8.51688 6.00157 8.64375 6.12907C9.065 6.55282 9.48375 7.63532 9.33813 7.78595ZM10.7769 7.80657C10.6881 7.80657 10.6619 7.78657 10.6619 7.78595C10.5163 7.63532 10.935 6.55282 11.3562 6.12907C11.6081 5.8747 12.0488 5.87345 12.3031 6.12907C12.5656 6.39282 12.5656 6.82282 12.3031 7.08657C12.0338 7.35782 11.2094 7.80657 10.7769 7.80657Z" fill="white"/>
-                                        <path d="M10.625 10.3066V14.6816H13.75C14.095 14.6816 14.375 14.4016 14.375 14.0566V10.3066H10.625Z" fill="white"/>
-                                    </svg>
-                                </span>
+                                            <span class="bonus-row__text-right bonus-row__text-right_blue" data-leading="7132">7 132 грн</span>
+                                        </div>
 
-                                <span class="bonus-card-title__text">Возьми на сумму - получи подарок</span>
+                                        <div class="bonus-row">
+                                            <span class="bonus-row__text-left">Выгода</span>
 
-                                <span class="bonus-card-title__arrow" data-indicator="bonus-card">
-                                    <svg width="14" height="9" viewBox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M13 8.14509L7 2L1 8.14509" stroke="#344E9F" stroke-width="2"/>
-                                    </svg>
-                                </span>
-                            </div>
-
-                            <div class="bonus-card-content" data-box="bonus-card" data-card="bonus">
-                                <div class="bonus-card-content__scale">
-                                    <div class="scale scale_img" data-scale="bonus" data-min="5000" data-max="10000">
-                                        <div class="scale__inner">
-                                            <div class="scale-mark" data-mark="bonus" data-position="5000">
-                                                <span class="scale-mark__text scale-mark__text_top scale-mark__text_left">5000</span>
-
-                                                <span class="scale-mark__line"></span>
-
-                                                <span class="scale-mark__img scale-mark__img_left" data-slave="bonus">
-                                                    <img src="images/gift-1.jpg" alt="gift" />
-
-                                                    <span class="scale-mark__title-img">Автомобидбный освежитель</span>
-                                                </span>
-                                            </div>
-
-                                            <div class="scale-mark" data-mark data-position="7000">
-                                                <span class="scale-mark__text scale-mark__text_top scale-mark__text_center">7000</span>
-
-                                                <span class="scale-mark__line"></span>
-
-                                                <span class="scale-mark__img scale-mark__img_center" data-slave="bonus">
-                                                    <img src="images/gift-1.jpg" alt="gift" />
-
-                                                    <span class="scale-mark__title-img">Автомобидбный освежитель</span>
-                                                </span>
-                                            </div>
-
-                                            <div class="scale-mark" data-mark data-position="10000">
-                                                <span class="scale-mark__text scale-mark__text_top scale-mark__text_right">10000</span>
-
-                                                <span class="scale-mark__line"></span>
-
-                                                <span class="scale-mark__img scale-mark__img_right" data-slave="bonus">
-                                                    <img src="images/gift-1.jpg" alt="gift" />
-
-                                                    <span class="scale-mark__title-img">Автомобидбный освежитель</span>
-                                                </span>
-                                            </div>
-
-                                            <div class="scale-track" >
-                                                <span class="scale-track__band" data-band="scale-track__band">
-                                                    <span class="scale-track__pointer" data-pointer="scale-track__pointer"></span>
-                                                </span>
-                                            </div>
+                                            <span class="bonus-row__text-right bonus-row__text-right_red">1 234 грн</span>
                                         </div>
                                     </div>
                                 </div>
+                            </div>
+                            <!-- end bonus -1 -->
 
-                                <div class="bonus-card-content__button">
-                                    <button class="bonus-button bonus-button_blue">Подобрать товары</button>
+                            <!-- bonus -2 -->
+                            <div class="bonus-card" data-container="bonus-card">
+                                <div class="bonus-card-title" data-button="bonus-card">
+                                    <span class="bonus-card-title__ico">
+                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="10" cy="10" r="10" fill="#344E9F"/>
+                                            <path d="M5.625 10.3066V14.0566C5.625 14.4016 5.90562 14.6816 6.25 14.6816H9.375V10.3066H5.625Z" fill="white"/>
+                                            <path d="M14.375 7.80657H12.3975C12.5394 7.7097 12.6613 7.61345 12.7463 7.5272C13.2506 7.02032 13.2506 6.19532 12.7463 5.68845C12.2562 5.1947 11.4025 5.19595 10.9131 5.68845C10.6419 5.96032 9.92313 7.0672 10.0225 7.80657H9.9775C10.0763 7.0672 9.3575 5.96032 9.08687 5.68845C8.59687 5.19595 7.74312 5.19595 7.25375 5.68845C6.75 6.19532 6.75 7.02032 7.25312 7.5272C7.33875 7.61345 7.46062 7.7097 7.6025 7.80657H5.625C5.28062 7.80657 5 8.0872 5 8.43157V9.36907C5 9.54157 5.14 9.68157 5.3125 9.68157H9.375V8.43157H10.625V9.68157H14.6875C14.86 9.68157 15 9.54157 15 9.36907V8.43157C15 8.0872 14.72 7.80657 14.375 7.80657ZM9.33813 7.78595C9.33813 7.78595 9.31187 7.80657 9.2225 7.80657C8.79063 7.80657 7.96625 7.35782 7.69688 7.08657C7.435 6.82282 7.435 6.39282 7.69688 6.12907C7.82375 6.00157 7.99187 5.93157 8.17062 5.93157C8.34875 5.93157 8.51688 6.00157 8.64375 6.12907C9.065 6.55282 9.48375 7.63532 9.33813 7.78595ZM10.7769 7.80657C10.6881 7.80657 10.6619 7.78657 10.6619 7.78595C10.5163 7.63532 10.935 6.55282 11.3562 6.12907C11.6081 5.8747 12.0488 5.87345 12.3031 6.12907C12.5656 6.39282 12.5656 6.82282 12.3031 7.08657C12.0338 7.35782 11.2094 7.80657 10.7769 7.80657Z" fill="white"/>
+                                            <path d="M10.625 10.3066V14.6816H13.75C14.095 14.6816 14.375 14.4016 14.375 14.0566V10.3066H10.625Z" fill="white"/>
+                                        </svg>
+                                    </span>
+
+                                    <span class="bonus-card-title__text">Возьми на сумму - получи подарок</span>
+
+                                    <span class="bonus-card-title__arrow" data-indicator="bonus-card">
+                                        <svg width="14" height="9" viewBox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M13 8.14509L7 2L1 8.14509" stroke="#344E9F" stroke-width="2"/>
+                                        </svg>
+                                    </span>
                                 </div>
 
-                                <div class="bonus-card-content__data">
-                                    <div class="bonus-row">
-                                        <span class="bonus-row__text-left">Мой чек</span>
+                                <div class="bonus-card-content" data-box="bonus-card" data-card="bonus">
+                                    <div class="bonus-card-content__scale">
+                                        <div class="scale scale_img" data-scale="bonus" data-min="5000" data-max="10000">
+                                            <div class="scale__inner">
+                                                <div class="scale-mark" data-mark="bonus" data-position="5000">
+                                                    <span class="scale-mark__text scale-mark__text_top scale-mark__text_left">5000</span>
 
-                                        <span class="bonus-row__text-right bonus-row__text-right_blue" data-leading="8432">8 432 грн</span>
+                                                    <span class="scale-mark__line"></span>
+
+                                                    <span class="scale-mark__img scale-mark__img_left" data-slave="bonus">
+                                                        <div class="bonus-picture">
+                                                            <span class="bonus-picture__img">
+                                                                <img src="images/gift-2.jpg" alt="gift" />
+                                                            </span>
+
+                                                            <span class="bonus-picture__title">Отвертка Брелок-фонарик CrV 4 биты СИЛА</span>
+                                                        </div>
+                                                    </span>
+                                                </div>
+
+                                                <div class="scale-mark" data-mark data-position="7000">
+                                                    <span class="scale-mark__text scale-mark__text_top scale-mark__text_center">7000</span>
+
+                                                    <span class="scale-mark__line"></span>
+
+                                                    <span class="scale-mark__img scale-mark__img_center" data-slave="bonus">
+                                                        <div class="bonus-picture">
+                                                            <span class="bonus-picture__img">
+                                                                <img src="images/gift-1.jpg" alt="gift" />
+                                                            </span>
+
+                                                            <span class="bonus-picture__title">Сумка</span>
+                                                        </div>
+                                                    </span>
+                                                </div>
+
+                                                <div class="scale-mark" data-mark data-position="10000">
+                                                    <span class="scale-mark__text scale-mark__text_top scale-mark__text_right">10000</span>
+
+                                                    <span class="scale-mark__line"></span>
+
+                                                    <span class="scale-mark__img scale-mark__img_right" data-slave="bonus">
+                                                        <div class="bonus-picture">
+                                                            <span class="bonus-picture__img">
+                                                                <img src="images/gift-2.jpg" alt="gift" />
+                                                            </span>
+
+                                                            <span class="bonus-picture__title">Автомобильный освежитель</span>
+                                                        </div>
+                                                    </span>
+                                                </div>
+
+                                                <div class="scale-track" >
+                                                    <span class="scale-track__band" data-band="scale-track__band">
+                                                        <span class="scale-track__pointer" data-pointer="scale-track__pointer"></span>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
 
-                                    <div class="bonus-row">
-                                        <span class="bonus-row__text-left">Выгода</span>
+                                    <div class="bonus-card-content__button">
+                                        <button class="bonus-button bonus-button_blue">Подобрать товары</button>
+                                    </div>
 
-                                        <span class="bonus-row__text-right bonus-row__text-right_red">1 234 грн</span>
+                                    <div class="bonus-card-content__data">
+                                        <div class="bonus-row">
+                                            <span class="bonus-row__text-left">Мой чек</span>
+
+                                            <span class="bonus-row__text-right bonus-row__text-right_blue" data-leading="9000">9 000 грн</span>
+                                        </div>
+
+                                        <div class="bonus-row">
+                                            <span class="bonus-row__text-left">Выгода</span>
+
+                                            <span class="bonus-row__text-right bonus-row__text-right_red">1 234 грн</span>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
+                            <!-- end bonus -2 -->
+
+                            <!-- bonus -3 -->
+                            <div class="bonus-card" data-container="bonus-card">
+                                <div class="bonus-card-title" data-button="bonus-card">
+                                    <span class="bonus-card-title__ico">
+                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="10" cy="10" r="10" fill="#E30613"/>
+                                            <rect x="5" y="7" width="9" height="1" fill="white"/>
+                                            <rect x="5" y="10" width="10" height="1" fill="white"/>
+                                            <rect x="5" y="13" width="6" height="1" fill="white"/>
+                                        </svg>
+                                    </span>
+
+                                    <span class="bonus-card-title__text">Купи количество SKU(строк) и получи бонус</span>
+
+                                    <span class="bonus-card-title__arrow" data-indicator="bonus-card">
+                                        <svg width="14" height="9" viewBox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M13 8.14509L7 2L1 8.14509" stroke="#344E9F" stroke-width="2"/>
+                                        </svg>
+                                    </span>
+                                </div>
+
+                                <div class="bonus-card-content" data-box="bonus-card" data-card="bonus">
+                                    <div class="bonus-card-content__scale">
+                                        <div class="scale" data-scale="bonus" data-min="10" data-max="30">
+                                            <div class="scale__inner">
+                                                <div class="scale-mark" data-mark="bonus" data-position="10">
+                                                    <span class="scale-mark__text scale-mark__text_top scale-mark__text_left">10</span>
+
+                                                    <span class="scale-mark__line"></span>
+
+                                                    <span class="scale-mark__text scale-mark__text_bottom scale-mark__text_left" data-slave="bonus">1%</span>
+                                                </div>
+
+                                                <div class="scale-mark" data-mark data-position="20">
+                                                    <span class="scale-mark__text scale-mark__text_top scale-mark__text_center">20</span>
+
+                                                    <span class="scale-mark__line"></span>
+
+                                                    <span class="scale-mark__text scale-mark__text_bottom scale-mark__text_center" data-slave="bonus">1,5%</span>
+                                                </div>
+
+                                                <div class="scale-mark" data-mark data-position="30">
+                                                    <span class="scale-mark__text scale-mark__text_top scale-mark__text_right">30</span>
+
+                                                    <span class="scale-mark__line"></span>
+
+                                                    <span class="scale-mark__text scale-mark__text_bottom scale-mark__text_right" data-slave="bonus">2%</span>
+                                                </div>
+
+                                                <div class="scale-track" >
+                                                    <span class="scale-track__band" data-band="scale-track__band">
+                                                        <span class="scale-track__pointer" data-pointer="scale-track__pointer"></span>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="bonus-card-content__button">
+                                        <button class="bonus-button bonus-button_blue">Подобрать товары</button>
+                                    </div>
+
+                                    <div class="bonus-card-content__data">
+                                        <div class="bonus-row">
+                                            <span class="bonus-row__text-left">Кол-во в заказе</span>
+
+                                            <span class="bonus-row__text-right bonus-row__text-right_blue" data-leading="25">25</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- end bonus -3 -->
+
+                            <!-- bonus -4 -->
+                            <div class="bonus-card" data-container="bonus-card">
+                                <div class="bonus-card-title" data-button="bonus-card">
+                                    <span class="bonus-card-title__ico">
+                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="10" cy="10" r="10" fill="#344E9F"/>
+                                            <path d="M5.625 10.3066V14.0566C5.625 14.4016 5.90562 14.6816 6.25 14.6816H9.375V10.3066H5.625Z" fill="white"/>
+                                            <path d="M14.375 7.80657H12.3975C12.5394 7.7097 12.6613 7.61345 12.7463 7.5272C13.2506 7.02032 13.2506 6.19532 12.7463 5.68845C12.2562 5.1947 11.4025 5.19595 10.9131 5.68845C10.6419 5.96032 9.92313 7.0672 10.0225 7.80657H9.9775C10.0763 7.0672 9.3575 5.96032 9.08687 5.68845C8.59687 5.19595 7.74312 5.19595 7.25375 5.68845C6.75 6.19532 6.75 7.02032 7.25312 7.5272C7.33875 7.61345 7.46062 7.7097 7.6025 7.80657H5.625C5.28062 7.80657 5 8.0872 5 8.43157V9.36907C5 9.54157 5.14 9.68157 5.3125 9.68157H9.375V8.43157H10.625V9.68157H14.6875C14.86 9.68157 15 9.54157 15 9.36907V8.43157C15 8.0872 14.72 7.80657 14.375 7.80657ZM9.33813 7.78595C9.33813 7.78595 9.31187 7.80657 9.2225 7.80657C8.79063 7.80657 7.96625 7.35782 7.69688 7.08657C7.435 6.82282 7.435 6.39282 7.69688 6.12907C7.82375 6.00157 7.99187 5.93157 8.17062 5.93157C8.34875 5.93157 8.51688 6.00157 8.64375 6.12907C9.065 6.55282 9.48375 7.63532 9.33813 7.78595ZM10.7769 7.80657C10.6881 7.80657 10.6619 7.78657 10.6619 7.78595C10.5163 7.63532 10.935 6.55282 11.3562 6.12907C11.6081 5.8747 12.0488 5.87345 12.3031 6.12907C12.5656 6.39282 12.5656 6.82282 12.3031 7.08657C12.0338 7.35782 11.2094 7.80657 10.7769 7.80657Z" fill="white"/>
+                                            <path d="M10.625 10.3066V14.6816H13.75C14.095 14.6816 14.375 14.4016 14.375 14.0566V10.3066H10.625Z" fill="white"/>
+                                        </svg>
+                                    </span>
+
+                                    <span class="bonus-card-title__text">Купи количество SKU(строк) и получи подарок</span>
+
+                                    <span class="bonus-card-title__arrow" data-indicator="bonus-card">
+                                        <svg width="14" height="9" viewBox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M13 8.14509L7 2L1 8.14509" stroke="#344E9F" stroke-width="2"/>
+                                        </svg>
+                                    </span>
+                                </div>
+
+                                <div class="bonus-card-content" data-box="bonus-card" data-card="bonus">
+                                    <div class="bonus-card-content__scale">
+                                        <div class="scale scale_img" data-scale="bonus" data-min="10" data-max="30">
+                                            <div class="scale__inner">
+                                                <div class="scale-mark" data-mark="bonus" data-position="10">
+                                                    <span class="scale-mark__text scale-mark__text_top scale-mark__text_left">10</span>
+
+                                                    <span class="scale-mark__line"></span>
+
+                                                    <span class="scale-mark__img scale-mark__img_left" data-slave="bonus">
+                                                        <div class="bonus-picture">
+                                                            <span class="bonus-picture__img">
+                                                                <img src="images/gift-1.jpg" alt="gift" />
+                                                            </span>
+
+                                                            <span class="bonus-picture__title">Автомобильный освежитель</span>
+                                                        </div>
+                                                    </span>
+                                                </div>
+
+                                                <div class="scale-mark" data-mark data-position="20">
+                                                    <span class="scale-mark__text scale-mark__text_top scale-mark__text_center">20</span>
+
+                                                    <span class="scale-mark__line"></span>
+
+                                                    <span class="scale-mark__img scale-mark__img_center" data-slave="bonus">
+                                                        <div class="bonus-picture">
+                                                            <span class="bonus-picture__img">
+                                                                <img src="images/gift-2.jpg" alt="gift" />
+                                                            </span>
+
+                                                            <span class="bonus-picture__title">Отвертка Брелок-фонарик CrV 4 биты СИЛА</span>
+                                                        </div>
+                                                    </span>
+                                                </div>
+
+                                                <div class="scale-mark" data-mark data-position="30">
+                                                    <span class="scale-mark__text scale-mark__text_top scale-mark__text_right">30</span>
+
+                                                    <span class="scale-mark__line"></span>
+
+                                                    <span class="scale-mark__img scale-mark__img_right" data-slave="bonus">
+                                                        <div class="bonus-picture">
+                                                            <span class="bonus-picture__img">
+                                                                <svg width="58" height="43" viewBox="0 0 58 43" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                    <rect width="58" height="43" fill="#038100"/>
+                                                                    <path d="M19.335 21.6543V29.6647C19.335 30.4017 19.9344 30.9998 20.67 30.9998H27.3454V21.6543H19.335Z" fill="white"/>
+                                                                    <path d="M30.0156 21.6543V30.9998H36.691C37.4279 30.9998 38.0261 30.4017 38.0261 29.6647V21.6543H30.0156Z" fill="white"/>
+                                                                    <path d="M38.0261 16.3146H33.8019C34.105 16.1077 34.3653 15.9021 34.5469 15.7178C35.6243 14.6351 35.6243 12.8728 34.5469 11.79C33.5002 10.7353 31.6765 10.738 30.6311 11.79C30.0517 12.3708 28.5164 14.7352 28.7286 16.3146H28.6325C28.8435 14.7352 27.3081 12.3708 26.73 11.79C25.6833 10.738 23.8596 10.738 22.8143 11.79C21.7382 12.8728 21.7382 14.6351 22.8129 15.7178C22.9958 15.9021 23.2562 16.1077 23.5592 16.3146H19.3351C18.5994 16.3146 18 16.914 18 17.6497V19.6523C18 20.0207 18.2991 20.3198 18.6675 20.3198H27.3455V17.6497H30.0156V20.3198H38.6936C39.0621 20.3198 39.3611 20.0207 39.3611 19.6523V17.6497C39.3611 16.914 38.763 16.3146 38.0261 16.3146ZM27.2667 16.2705C27.2667 16.2705 27.2107 16.3146 27.0197 16.3146C26.0972 16.3146 24.3363 15.356 23.7608 14.7766C23.2014 14.2132 23.2014 13.2947 23.7608 12.7313C24.0319 12.4589 24.391 12.3094 24.7728 12.3094C25.1533 12.3094 25.5124 12.4589 25.7835 12.7313C26.6833 13.6364 27.5778 15.9488 27.2667 16.2705ZM30.3401 16.3146C30.1505 16.3146 30.0944 16.2719 30.0944 16.2705C29.7833 15.9488 30.6778 13.6364 31.5777 12.7313C32.1157 12.1879 33.0569 12.1852 33.6003 12.7313C34.161 13.2947 34.161 14.2132 33.6003 14.7766C33.0249 15.356 31.2639 16.3146 30.3401 16.3146Z" fill="white"/>
+                                                                </svg>
+                                                            </span>
+
+                                                            <span class="bonus-picture__title">Отвертка Брелок-фонарик CrV 4 биты СИЛА</span>
+                                                        </div>
+                                                    </span>
+                                                </div>
+
+                                                <div class="scale-track" >
+                                                    <span class="scale-track__band" data-band="scale-track__band">
+                                                        <span class="scale-track__pointer" data-pointer="scale-track__pointer"></span>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="bonus-card-content__button">
+                                        <button class="bonus-button bonus-button_blue">Подобрать товары</button>
+                                    </div>
+
+                                    <div class="bonus-card-content__data">
+                                        <div class="bonus-row">
+                                            <span class="bonus-row__text-left">Кол-во в заказе</span>
+
+                                            <span class="bonus-row__text-right bonus-row__text-right_blue" data-leading="18">18</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- end bonus -4 -->
+
+                            <!-- bonus -5 -->
+                            <div class="bonus-card" data-container="bonus-card">
+                                <div class="bonus-card-title" data-button="bonus-card">
+                                    <span class="bonus-card-title__ico">
+                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M10 0C4.45455 0 0 4.45455 0 10C0 15.5455 4.45455 20 10 20C15.5455 20 20 15.5455 20 10C20 4.45455 15.5455 0 10 0ZM15.7727 6.86364L8.5 14.4091C8.40909 14.5 8.31818 14.5455 8.18182 14.5455C8.04545 14.5455 7.90909 14.5 7.86364 14.4091L4.31818 10.5909L4.22727 10.5C4.13636 10.4091 4.09091 10.2727 4.09091 10.1818C4.09091 10.0909 4.13636 9.95455 4.22727 9.86364L4.86364 9.22727C5.04545 9.04545 5.31818 9.04545 5.5 9.22727L5.54545 9.27273L8.04545 11.9545C8.13636 12.0455 8.27273 12.0455 8.36364 11.9545L14.4545 5.63636H14.5C14.6818 5.45455 14.9545 5.45455 15.1364 5.63636L15.7727 6.27273C15.9545 6.40909 15.9545 6.68182 15.7727 6.86364Z" fill="#038100"/>
+                                        </svg>
+                                    </span>
+
+                                    <span class="bonus-card-title__text">Комплект рулеток с магнитом - 15%</span>
+
+                                    <span class="bonus-card-title__arrow" data-indicator="bonus-card">
+                                        <svg width="14" height="9" viewBox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M13 8.14509L7 2L1 8.14509" stroke="#344E9F" stroke-width="2"/>
+                                        </svg>
+                                    </span>
+                                </div>
+
+                                <div class="bonus-card-content" data-box="bonus-card" data-card="bonus">
+                                    <div class="bonus-descr">
+                                        <span class="bonus-descr__text">Купи Рулетки с магнитом 500251 (1шт) + 500253 (2шт) + 500255 (1шт) в 1 заказе и получи бонусов 15%</span>
+                                    </div>
+
+                                    <div class="bonus-card-content__offer">
+                                        <div class="bonus-offer">
+                                            <div class="bonus-offer__item">
+                                                <div class="bonus-picture">
+                                                    <span class="bonus-picture__img">
+                                                        <img src="images/gift-2.jpg" alt="gift" />
+                                                    </span>
+
+                                                    <span class="bonus-picture__title">Отвертка Брелок-фонарик CrV 4 биты СИЛА</span>
+                                                </div>
+                                            </div>
+
+                                            <div class="bonus-offer__item">
+                                                <div class="bonus-picture">
+                                                    <span class="bonus-picture__img">
+                                                        <svg width="58" height="43" viewBox="0 0 58 43" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <rect width="58" height="43" fill="#038100"/>
+                                                            <path d="M19.335 21.6543V29.6647C19.335 30.4017 19.9344 30.9998 20.67 30.9998H27.3454V21.6543H19.335Z" fill="white"/>
+                                                            <path d="M30.0156 21.6543V30.9998H36.691C37.4279 30.9998 38.0261 30.4017 38.0261 29.6647V21.6543H30.0156Z" fill="white"/>
+                                                            <path d="M38.0261 16.3146H33.8019C34.105 16.1077 34.3653 15.9021 34.5469 15.7178C35.6243 14.6351 35.6243 12.8728 34.5469 11.79C33.5002 10.7353 31.6765 10.738 30.6311 11.79C30.0517 12.3708 28.5164 14.7352 28.7286 16.3146H28.6325C28.8435 14.7352 27.3081 12.3708 26.73 11.79C25.6833 10.738 23.8596 10.738 22.8143 11.79C21.7382 12.8728 21.7382 14.6351 22.8129 15.7178C22.9958 15.9021 23.2562 16.1077 23.5592 16.3146H19.3351C18.5994 16.3146 18 16.914 18 17.6497V19.6523C18 20.0207 18.2991 20.3198 18.6675 20.3198H27.3455V17.6497H30.0156V20.3198H38.6936C39.0621 20.3198 39.3611 20.0207 39.3611 19.6523V17.6497C39.3611 16.914 38.763 16.3146 38.0261 16.3146ZM27.2667 16.2705C27.2667 16.2705 27.2107 16.3146 27.0197 16.3146C26.0972 16.3146 24.3363 15.356 23.7608 14.7766C23.2014 14.2132 23.2014 13.2947 23.7608 12.7313C24.0319 12.4589 24.391 12.3094 24.7728 12.3094C25.1533 12.3094 25.5124 12.4589 25.7835 12.7313C26.6833 13.6364 27.5778 15.9488 27.2667 16.2705ZM30.3401 16.3146C30.1505 16.3146 30.0944 16.2719 30.0944 16.2705C29.7833 15.9488 30.6778 13.6364 31.5777 12.7313C32.1157 12.1879 33.0569 12.1852 33.6003 12.7313C34.161 13.2947 34.161 14.2132 33.6003 14.7766C33.0249 15.356 31.2639 16.3146 30.3401 16.3146Z" fill="white"/>
+                                                        </svg>
+                                                    </span>
+
+                                                    <span class="bonus-picture__title">Отвертка Брелок-фонарик CrV 4 биты СИЛА</span>
+                                                </div>
+                                            </div>
+
+                                            <div class="bonus-offer__item">
+                                                <div class="bonus-picture">
+                                                    <span class="bonus-picture__img">
+                                                        <img src="images/gift-2.jpg" alt="gift" />
+                                                    </span>
+
+                                                    <span class="bonus-picture__title">Отвертка Брелок-фонарик CrV 4 биты СИЛА</span>
+                                                </div>
+                                            </div>
+
+                                            <div class="bonus-offer__result">
+                                                <span class="bonus-offer__text">15%</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="bonus-card-content__button">
+                                        <button class="bonus-button bonus-button_blue">Укомплектовать заказ</button>
+                                    </div>
+
+                                    <div class="bonus-card-content__data">
+                                        <div class="bonus-row">
+                                            <span class="bonus-row__text-left">Выгода</span>
+
+                                            <span class="bonus-row__text-right bonus-row__text-right_red">1 234 грн</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- end bonus -5 -->
+
+                            <!-- bonus -6 -->
+                            <div class="bonus-card" data-container="bonus-card">
+                                <div class="bonus-card-title" data-button="bonus-card">
+                                    <span class="bonus-card-title__ico">
+                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M10 0C4.45455 0 0 4.45455 0 10C0 15.5455 4.45455 20 10 20C15.5455 20 20 15.5455 20 10C20 4.45455 15.5455 0 10 0ZM15.7727 6.86364L8.5 14.4091C8.40909 14.5 8.31818 14.5455 8.18182 14.5455C8.04545 14.5455 7.90909 14.5 7.86364 14.4091L4.31818 10.5909L4.22727 10.5C4.13636 10.4091 4.09091 10.2727 4.09091 10.1818C4.09091 10.0909 4.13636 9.95455 4.22727 9.86364L4.86364 9.22727C5.04545 9.04545 5.31818 9.04545 5.5 9.22727L5.54545 9.27273L8.04545 11.9545C8.13636 12.0455 8.27273 12.0455 8.36364 11.9545L14.4545 5.63636H14.5C14.6818 5.45455 14.9545 5.45455 15.1364 5.63636L15.7727 6.27273C15.9545 6.40909 15.9545 6.68182 15.7727 6.86364Z" fill="#038100"/>
+                                        </svg>
+                                    </span>
+
+                                    <span class="bonus-card-title__text">Комплект рулеток с магнитом - 15%</span>
+
+                                    <span class="bonus-card-title__arrow" data-indicator="bonus-card">
+                                        <svg width="14" height="9" viewBox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M13 8.14509L7 2L1 8.14509" stroke="#344E9F" stroke-width="2"/>
+                                        </svg>
+                                    </span>
+                                </div>
+
+                                <div class="bonus-card-content" data-box="bonus-card" data-card="bonus">
+                                    <div class="bonus-descr">
+                                        <span class="bonus-descr__text">Купи Рулетки с магнитом 500251 (1шт) + 500253 (2шт) + 500255 (1шт) в 1 заказе и получи бонусов 15%</span>
+                                    </div>
+
+                                    <div class="bonus-card-content__offer">
+                                        <div class="bonus-offer">
+                                            <div class="bonus-offer__item">
+                                                <div class="bonus-picture">
+                                                    <span class="bonus-picture__img">
+                                                        <img src="images/gift-2.jpg" alt="gift" />
+                                                    </span>
+
+                                                    <span class="bonus-picture__title">Отвертка Брелок-фонарик CrV 4 биты СИЛА</span>
+                                                </div>
+                                            </div>
+
+                                            <div class="bonus-offer__item">
+                                                <div class="bonus-picture">
+                                                    <span class="bonus-picture__img">
+                                                        <svg width="58" height="43" viewBox="0 0 58 43" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <rect width="58" height="43" fill="#038100"/>
+                                                            <path d="M19.335 21.6543V29.6647C19.335 30.4017 19.9344 30.9998 20.67 30.9998H27.3454V21.6543H19.335Z" fill="white"/>
+                                                            <path d="M30.0156 21.6543V30.9998H36.691C37.4279 30.9998 38.0261 30.4017 38.0261 29.6647V21.6543H30.0156Z" fill="white"/>
+                                                            <path d="M38.0261 16.3146H33.8019C34.105 16.1077 34.3653 15.9021 34.5469 15.7178C35.6243 14.6351 35.6243 12.8728 34.5469 11.79C33.5002 10.7353 31.6765 10.738 30.6311 11.79C30.0517 12.3708 28.5164 14.7352 28.7286 16.3146H28.6325C28.8435 14.7352 27.3081 12.3708 26.73 11.79C25.6833 10.738 23.8596 10.738 22.8143 11.79C21.7382 12.8728 21.7382 14.6351 22.8129 15.7178C22.9958 15.9021 23.2562 16.1077 23.5592 16.3146H19.3351C18.5994 16.3146 18 16.914 18 17.6497V19.6523C18 20.0207 18.2991 20.3198 18.6675 20.3198H27.3455V17.6497H30.0156V20.3198H38.6936C39.0621 20.3198 39.3611 20.0207 39.3611 19.6523V17.6497C39.3611 16.914 38.763 16.3146 38.0261 16.3146ZM27.2667 16.2705C27.2667 16.2705 27.2107 16.3146 27.0197 16.3146C26.0972 16.3146 24.3363 15.356 23.7608 14.7766C23.2014 14.2132 23.2014 13.2947 23.7608 12.7313C24.0319 12.4589 24.391 12.3094 24.7728 12.3094C25.1533 12.3094 25.5124 12.4589 25.7835 12.7313C26.6833 13.6364 27.5778 15.9488 27.2667 16.2705ZM30.3401 16.3146C30.1505 16.3146 30.0944 16.2719 30.0944 16.2705C29.7833 15.9488 30.6778 13.6364 31.5777 12.7313C32.1157 12.1879 33.0569 12.1852 33.6003 12.7313C34.161 13.2947 34.161 14.2132 33.6003 14.7766C33.0249 15.356 31.2639 16.3146 30.3401 16.3146Z" fill="white"/>
+                                                        </svg>
+                                                    </span>
+
+                                                    <span class="bonus-picture__title">Отвертка Брелок-фонарик CrV 4 биты СИЛА</span>
+                                                </div>
+                                            </div>
+
+                                            <div class="bonus-offer__item">
+                                                <div class="bonus-picture">
+                                                    <span class="bonus-picture__img">
+                                                        <img src="images/gift-2.jpg" alt="gift" />
+                                                    </span>
+
+                                                    <span class="bonus-picture__title">Отвертка Брелок-фонарик CrV 4 биты СИЛА</span>
+                                                </div>
+                                            </div>
+
+                                            <div class="bonus-offer__item">
+                                                <div class="bonus-picture">
+                                                    <span class="bonus-picture__img">
+                                                        <img src="images/gift-2.jpg" alt="gift" />
+                                                    </span>
+
+                                                    <span class="bonus-picture__title">Отвертка Брелок-фонарик CrV 4 биты СИЛА</span>
+                                                </div>
+                                            </div>
+
+                                            <div class="bonus-offer__item">
+                                                <div class="bonus-picture">
+                                                    <span class="bonus-picture__img">
+                                                        <img src="images/gift-2.jpg" alt="gift" />
+                                                    </span>
+
+                                                    <span class="bonus-picture__title">Отвертка Брелок-фонарик CrV 4 биты СИЛА</span>
+                                                </div>
+                                            </div>
+
+                                            <div class="bonus-offer__item">
+                                                <div class="bonus-picture">
+                                                    <span class="bonus-picture__img">
+                                                        <img src="images/gift-2.jpg" alt="gift" />
+                                                    </span>
+
+                                                    <span class="bonus-picture__title">Отвертка Брелок-фонарик CrV 4 биты СИЛА</span>
+                                                </div>
+                                            </div>
+
+                                            <div class="bonus-offer__item">
+                                                <div class="bonus-picture">
+                                                    <span class="bonus-picture__img">
+                                                        <img src="images/gift-2.jpg" alt="gift" />
+                                                    </span>
+
+                                                    <span class="bonus-picture__title">Отвертка Брелок-фонарик CrV 4 биты СИЛА</span>
+                                                </div>
+                                            </div>
+
+                                            <div class="bonus-offer__item">
+                                                <div class="bonus-picture">
+                                                    <span class="bonus-picture__img">
+                                                        <img src="images/gift-2.jpg" alt="gift" />
+                                                    </span>
+
+                                                    <span class="bonus-picture__title">Отвертка Брелок-фонарик CrV 4 биты СИЛА</span>
+                                                </div>
+                                            </div>
+
+                                            <div class="bonus-offer__item">
+                                                <div class="bonus-picture">
+                                                    <span class="bonus-picture__img">
+                                                        <img src="images/gift-2.jpg" alt="gift" />
+                                                    </span>
+
+                                                    <span class="bonus-picture__title">Отвертка Брелок-фонарик CrV 4 биты СИЛА</span>
+                                                </div>
+                                            </div>
+
+                                            <div class="bonus-offer__item">
+                                                <div class="bonus-picture">
+                                                    <span class="bonus-picture__img">
+                                                        <img src="images/gift-2.jpg" alt="gift" />
+                                                    </span>
+
+                                                    <span class="bonus-picture__title">Отвертка Брелок-фонарик CrV 4 биты СИЛА</span>
+                                                </div>
+                                            </div>
+
+                                            <div class="bonus-offer__result">
+                                                <div class="bonus-picture">
+                                                    <span class="bonus-picture__img">
+                                                        <img src="images/gift-3.jpg" alt="gift" />
+                                                    </span>
+
+                                                    <span class="bonus-picture__title">Отвертка Брелок-фонарик CrV 4 биты СИЛА</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="bonus-card-content__button">
+                                        <button class="bonus-button bonus-button_blue">Укомплектовать заказ</button>
+                                    </div>
+
+                                    <div class="bonus-card-content__data">
+                                        <div class="bonus-row">
+                                            <span class="bonus-row__text-left">Выгода</span>
+
+                                            <span class="bonus-row__text-right bonus-row__text-right_red">1 234 грн</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- end bonus -6 -->
+
+                            <!-- bonus -7 -->
+                            <div class="bonus-card" data-container="bonus-card">
+                                <div class="bonus-card-title" data-button="bonus-card">
+                                    <span class="bonus-card-title__ico">
+                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M10 0C4.45455 0 0 4.45455 0 10C0 15.5455 4.45455 20 10 20C15.5455 20 20 15.5455 20 10C20 4.45455 15.5455 0 10 0ZM15.7727 6.86364L8.5 14.4091C8.40909 14.5 8.31818 14.5455 8.18182 14.5455C8.04545 14.5455 7.90909 14.5 7.86364 14.4091L4.31818 10.5909L4.22727 10.5C4.13636 10.4091 4.09091 10.2727 4.09091 10.1818C4.09091 10.0909 4.13636 9.95455 4.22727 9.86364L4.86364 9.22727C5.04545 9.04545 5.31818 9.04545 5.5 9.22727L5.54545 9.27273L8.04545 11.9545C8.13636 12.0455 8.27273 12.0455 8.36364 11.9545L14.4545 5.63636H14.5C14.6818 5.45455 14.9545 5.45455 15.1364 5.63636L15.7727 6.27273C15.9545 6.40909 15.9545 6.68182 15.7727 6.86364Z" fill="#038100"/>
+                                        </svg>
+                                    </span>
+
+                                    <span class="bonus-card-title__text">Комплект рулеток с магнитом - 15%</span>
+
+                                    <span class="bonus-card-title__arrow" data-indicator="bonus-card">
+                                        <svg width="14" height="9" viewBox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M13 8.14509L7 2L1 8.14509" stroke="#344E9F" stroke-width="2"/>
+                                        </svg>
+                                    </span>
+                                </div>
+
+                                <div class="bonus-card-content" data-box="bonus-card" data-card="bonus">
+                                    <div class="bonus-descr">
+                                        <span class="bonus-descr__text">Купи Рулетки с магнитом 500251 (1шт) + 500253 (2шт) + 500255 (1шт) в 1 заказе и получи бонусов 15%</span>
+                                    </div>
+
+                                    <div class="bonus-card-content__offer">
+                                        <div class="bonus-offer">
+                                            <div class="bonus-offer__item">
+                                                <div class="bonus-picture">
+                                                    <span class="bonus-picture__img">
+                                                        <svg width="58" height="43" viewBox="0 0 58 43" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <rect width="58" height="43" fill="#038100"/>
+                                                            <path d="M30.6101 22.1577L29.7139 22.6764V32L37.7844 27.3403V18.0166L30.6101 22.1577Z" fill="white"/>
+                                                            <path d="M32.0702 13.7967L28.9665 12L20.6719 16.7884L23.7798 18.5851L32.0702 13.7967Z" fill="white"/>
+                                                            <path d="M37.2569 16.7883L33.6801 14.751L25.3896 19.5394L25.8627 19.7842L28.9664 21.5767L32.0535 19.7966L37.2569 16.7883Z" fill="white"/>
+                                                            <path d="M24.7635 22.9668L23.2781 22.2033V19.8299L20.2158 18.0664V27.3237L28.2283 31.9502V22.693L24.7635 20.6971V22.9668Z" fill="white"/>
+                                                        </svg>
+                                                    </span>
+
+                                                    <span class="bonus-picture__title">Отвертка Брелок-фонарик CrV 4 биты СИЛА</span>
+                                                </div>
+                                            </div>
+
+                                            <div class="bonus-offer__item">
+                                                <div class="bonus-picture">
+                                                    <span class="bonus-picture__img">
+                                                        <svg width="58" height="43" viewBox="0 0 58 43" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <rect width="58" height="43" fill="#038100"/>
+                                                            <path d="M30.6101 22.1577L29.7139 22.6764V32L37.7844 27.3403V18.0166L30.6101 22.1577Z" fill="white"/>
+                                                            <path d="M32.0702 13.7967L28.9665 12L20.6719 16.7884L23.7798 18.5851L32.0702 13.7967Z" fill="white"/>
+                                                            <path d="M37.2569 16.7883L33.6801 14.751L25.3896 19.5394L25.8627 19.7842L28.9664 21.5767L32.0535 19.7966L37.2569 16.7883Z" fill="white"/>
+                                                            <path d="M24.7635 22.9668L23.2781 22.2033V19.8299L20.2158 18.0664V27.3237L28.2283 31.9502V22.693L24.7635 20.6971V22.9668Z" fill="white"/>
+                                                        </svg>
+                                                    </span>
+
+                                                    <span class="bonus-picture__title">Отвертка Брелок-фонарик CrV 4 биты СИЛА</span>
+                                                </div>
+                                            </div>
+
+                                            <div class="bonus-offer__result">
+                                                <div class="bonus-picture">
+                                                    <span class="bonus-picture__img">
+                                                        <img src="images/gift-3.jpg" alt="gift" />
+
+                                                        <span class="bonus-picture__info">x1</span>
+                                                    </span>
+
+                                                    <span class="bonus-picture__title">Отвертка Брелок-фонарик CrV 4 биты СИЛА</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="bonus-card-content__button">
+                                        <button class="bonus-button bonus-button_blue">Укомплектовать заказ</button>
+
+                                        <button class="bonus-button bonus-button_red">Удалить комплект</button>
+                                    </div>
+
+                                    <div class="bonus-card-content__data">
+                                        <div class="bonus-row">
+                                            <span class="bonus-row__text-left">Выгода</span>
+
+                                            <span class="bonus-row__text-right bonus-row__text-right_red">1 234 грн</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- end bonus -7 -->
+
+                            <!-- bonus -8 -->
+                            <div class="bonus-card" data-container="bonus-card">
+                                <div class="bonus-card-title" data-button="bonus-card">
+                                    <span class="bonus-card-title__ico">
+                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="10" cy="10" r="10" fill="#E30613"/>
+                                            <rect x="5" y="7" width="9" height="1" fill="white"/>
+                                            <rect x="5" y="10" width="10" height="1" fill="white"/>
+                                            <rect x="5" y="13" width="6" height="1" fill="white"/>
+                                        </svg>
+                                    </span>
+
+                                    <span class="bonus-card-title__text">Мотор стеклоочист/омыв /стеклопод - 5%</span>
+
+                                    <span class="bonus-card-title__arrow" data-indicator="bonus-card">
+                                        <svg width="14" height="9" viewBox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M13 8.14509L7 2L1 8.14509" stroke="#344E9F" stroke-width="2"/>
+                                        </svg>
+                                    </span>
+                                </div>
+
+                                <div class="bonus-card-content" data-box="bonus-card" data-card="bonus">
+                                    <div class="bonus-descr">
+                                        <span class="bonus-descr__text">Возьми на сумму из порога мотор стеклоочистителя, омывателя и стеклоподъемника в 1-ом заказе и получи бонусов 5%</span>
+                                    </div>
+
+                                    <div class="bonus-card-content__scale">
+                                        <div class="scale" data-scale="bonus" data-min="0" data-max="200">
+                                            <div class="scale__inner">
+                                                <div class="scale-mark" data-mark data-position="100">
+                                                    <span class="scale-mark__text scale-mark__text_top scale-mark__text_center">100 шт</span>
+
+                                                    <span class="scale-mark__line"></span>
+
+                                                    <span class="scale-mark__text scale-mark__text_bottom scale-mark__text_center" data-slave="bonus">5%</span>
+                                                </div>
+
+                                                <div class="scale-track" >
+                                                    <span class="scale-track__band" data-band="scale-track__band">
+                                                        <span class="scale-track__pointer" data-pointer="scale-track__pointer"></span>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="bonus-card-content__button">
+                                        <button class="bonus-button bonus-button_blue">Подобрать товары</button>
+                                    </div>
+
+                                    <div class="bonus-card-content__data">
+                                        <div class="bonus-row">
+                                            <span class="bonus-row__text-left">Кол-во в заказе</span>
+
+                                            <span class="bonus-row__text-right bonus-row__text-right_blue" data-leading="120">120</span>
+                                        </div>
+
+                                        <div class="bonus-row">
+                                            <span class="bonus-row__text-left">Выгода</span>
+
+                                            <span class="bonus-row__text-right bonus-row__text-right_red">1 234 грн</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- end bonus -8 -->
+
+                            <!-- bonus -9 -->
+                            <div class="bonus-card" data-container="bonus-card">
+                                <div class="bonus-card-title" data-button="bonus-card">
+                                    <span class="bonus-card-title__ico">
+                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="10" cy="10" r="10" fill="#344E9F"/>
+                                            <path d="M5.625 10.3066V14.0566C5.625 14.4016 5.90562 14.6816 6.25 14.6816H9.375V10.3066H5.625Z" fill="white"/>
+                                            <path d="M14.375 7.80657H12.3975C12.5394 7.7097 12.6613 7.61345 12.7463 7.5272C13.2506 7.02032 13.2506 6.19532 12.7463 5.68845C12.2562 5.1947 11.4025 5.19595 10.9131 5.68845C10.6419 5.96032 9.92313 7.0672 10.0225 7.80657H9.9775C10.0763 7.0672 9.3575 5.96032 9.08687 5.68845C8.59687 5.19595 7.74312 5.19595 7.25375 5.68845C6.75 6.19532 6.75 7.02032 7.25312 7.5272C7.33875 7.61345 7.46062 7.7097 7.6025 7.80657H5.625C5.28062 7.80657 5 8.0872 5 8.43157V9.36907C5 9.54157 5.14 9.68157 5.3125 9.68157H9.375V8.43157H10.625V9.68157H14.6875C14.86 9.68157 15 9.54157 15 9.36907V8.43157C15 8.0872 14.72 7.80657 14.375 7.80657ZM9.33813 7.78595C9.33813 7.78595 9.31187 7.80657 9.2225 7.80657C8.79063 7.80657 7.96625 7.35782 7.69688 7.08657C7.435 6.82282 7.435 6.39282 7.69688 6.12907C7.82375 6.00157 7.99187 5.93157 8.17062 5.93157C8.34875 5.93157 8.51688 6.00157 8.64375 6.12907C9.065 6.55282 9.48375 7.63532 9.33813 7.78595ZM10.7769 7.80657C10.6881 7.80657 10.6619 7.78657 10.6619 7.78595C10.5163 7.63532 10.935 6.55282 11.3562 6.12907C11.6081 5.8747 12.0488 5.87345 12.3031 6.12907C12.5656 6.39282 12.5656 6.82282 12.3031 7.08657C12.0338 7.35782 11.2094 7.80657 10.7769 7.80657Z" fill="white"/>
+                                            <path d="M10.625 10.3066V14.6816H13.75C14.095 14.6816 14.375 14.4016 14.375 14.0566V10.3066H10.625Z" fill="white"/>
+                                        </svg>
+                                    </span>
+
+                                    <span class="bonus-card-title__text">Комплект рулеток с магнитом - 15%</span>
+
+                                    <span class="bonus-card-title__arrow" data-indicator="bonus-card">
+                                        <svg width="14" height="9" viewBox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M13 8.14509L7 2L1 8.14509" stroke="#344E9F" stroke-width="2"/>
+                                        </svg>
+                                    </span>
+                                </div>
+
+                                <div class="bonus-card-content" data-box="bonus-card" data-card="bonus">
+                                    <div class="bonus-descr">
+                                        <span class="bonus-descr__text">При покупке ступицы - сальник в подарок</span>
+                                    </div>
+
+                                    <div class="bonus-card-content__offer">
+                                        <div class="bonus-offer">
+                                            <div class="bonus-offer__item">
+                                                <div class="bonus-picture">
+                                                    <span class="bonus-picture__img">
+                                                        <img src="images/gift-4.jpg" alt="gift" />
+                                                    </span>
+
+                                                    <span class="bonus-picture__title">Отвертка Брелок-фонарик CrV 4 биты СИЛА</span>
+                                                </div>
+                                            </div>
+
+                                            <div class="bonus-offer__result">
+                                                <div class="bonus-picture">
+                                                    <span class="bonus-picture__img">
+                                                        <img src="images/gift-2.jpg" alt="gift" />
+                                                    </span>
+
+                                                    <span class="bonus-picture__title">Отвертка Брелок-фонарик CrV 4 биты СИЛА</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="bonus-card-content__button">
+                                        <button class="bonus-button bonus-button_blue">Подобрать товары</button>
+                                    </div>
+
+                                    <div class="bonus-card-content__data">
+                                        <div class="bonus-row">
+                                            <span class="bonus-row__text-left">Выгода</span>
+
+                                            <span class="bonus-row__text-right bonus-row__text-right_blue">2x Сальник ступицы ВАЗ 2106 Lorem ipsum dolor.</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- end bonus -9 -->
                         </div>
                     </div>
                 </div> <!-- end bonus-info -->

@@ -1,0 +1,394 @@
+@import "var";
+@import "button-common";
+
+.bonus {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 2000;
+
+  &__inner {
+    display: flex;
+    justify-content: flex-end;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+  }
+
+  &.open {
+    display: block;
+  }
+
+  &__content {
+    transform: translateX(100%);
+    flex-shrink: 0;
+    position: relative;
+    z-index: 2;
+    width: 375px;
+    background: #fff;
+    transition: .3s;
+    opacity: 0;
+
+    &.open {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+
+  &__substrate {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 1;
+
+    &_container {
+      background: rgba(0,0,0,.5);
+      opacity: 0;
+      transition: .15s;
+
+      &.open {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+.bonus-info {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 20px 0 0;
+
+  &__button-back {
+    margin: 0 0 18px;
+    padding: 0 10px;
+  }
+
+  &__hold {
+    flex-grow: 1;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 0 10px 30px;
+    height: calc(100% - 68px);
+
+    @media (max-width: 374px) {
+      padding: 0 15px 65px;
+    }
+  }
+}
+
+.bonus-card {
+  width: 340px;
+  padding: 0 0 0 10px;
+  border-bottom: 1px solid $c-gray-5;
+
+  &-title {
+    position: relative;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding: 10px 30px;
+
+    &__ico {
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 20px;
+      height: 20px;
+    }
+
+    &__arrow {
+      position: absolute;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+      width: 20px;
+      height: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: .2s;
+
+      &.open {
+        transform: rotate(180deg);
+      }
+
+      & svg {
+        display: block;
+      }
+    }
+  }
+
+  &-content {
+    padding: 5px 30px ;
+
+    &__scale {
+      padding: 7px 0;
+    }
+
+    &__button {
+      display: flex;
+      align-items: center;
+      padding: 7px 0;
+    }
+
+    &__data {
+      padding: 7px 0;
+    }
+  }
+}
+
+.bonus-button {
+  @extend %button-common;
+  height: 18px;
+  padding: 0 15px;
+  font-size: 9px;
+  line-height: 11px;
+  border: 0;
+  font-family: $f-l;
+  margin: 0 10px 0 0;
+
+  &_blue {
+    color: #fff;
+    background: $c-blue;
+
+    @media (hover: hover) {
+      &:hover {
+        background: $c-blue-dark;
+      }
+    }
+  }
+
+  &_red {
+    color: #fff;
+    background: $c-red;
+
+    @media (hover: hover) {
+      &:hover {
+        background: $c-red-dark;
+      }
+    }
+  }
+}
+
+.bonus-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 7px 0;
+
+  &__text-left {
+    display: block;
+    font-size: 11px;
+    line-height: 13px;
+    color: $c-gray-3;
+    font-family: $f-l;
+    width: 95px;
+    padding: 0 0 0 3px;
+  }
+
+  &__text-right {
+    display: block;
+    font-size: 14px;
+    line-height: 14px;
+    font-family: $f-l;
+    flex: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 175px;
+    text-align: right;
+
+    &_blue {
+      color: $c-blue;
+    }
+
+    &_red {
+      color: $c-red        ;
+    }
+  }
+}
+
+.bonus-scroll {
+  height: 100%;
+}
+
+.bonus-picture {
+  width: 60px;
+  position: relative;
+
+  &__info {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 15px;
+    height: 15px;
+    font-size: 8px;
+    line-height: 8px;
+    color: #fff;
+    background: $c-gray-12;
+    z-index: 1;
+  }
+
+  &__img {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid $c-gray-12;
+    height: 45px;
+    width: 100%;
+
+    &:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: block;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,.1);
+      z-index: 2;
+    }
+
+    & img {
+      display: block;
+      bottom: 0;
+      outline: none;
+      max-width: 100%;
+      max-height: 100%;
+      filter: grayscale(100%);
+    }
+
+    & svg {
+      display: block;
+
+      & rect {
+        fill: $c-gray-12;
+      }
+    }
+  }
+
+  &__title {
+    display: block;
+    width: 100%;
+    height: 21px;
+    font-size: 9px;
+    color: $c-gray-7;
+    line-height: 21px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+}
+
+.bonus-offer {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -22px 0 0;
+
+  &__item {
+    position: relative;
+    flex-shrink: 0;
+    margin: 0 22px 5px 0;
+
+    &:after {
+      content: '+';
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+      line-height: 14px;
+      width: 22px;
+      height: 45px;
+      position: absolute;
+      left: 100%;
+      top: 0;
+    }
+
+    &:nth-last-child(2) {
+      &:after {
+        content: '=';
+      }
+    }
+
+    &.active {
+      & .bonus-picture__img {
+        border-color: $c-green;
+
+        &:after {
+          background: none;
+        }
+
+        & img {
+          filter: none;
+        }
+
+        & svg rect {
+          fill: $c-green;
+        }
+      }
+    }
+  }
+
+  &__result {
+
+  }
+
+  &__text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 45px;
+    color: $c-green;
+    font-size: 14px;
+    line-height: 14px;
+  }
+}
+
+.bonus-active {
+  & .bonus-picture__img {
+    border-color: $c-green;
+
+    &:after {
+      background: none;
+    }
+
+    & img {
+      filter: none;
+    }
+
+    & svg rect {
+      fill: $c-green;
+    }
+  }
+
+  & .bonus-picture__info {
+    background: $c-green;
+  }
+}
+
+.bonus-descr {
+  padding: 10px 0;
+  &__text {
+    display: block;
+    font-size: 9px;
+    line-height: 13px;
+    color: $c-gray-7;
+  }
+}

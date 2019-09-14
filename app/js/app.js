@@ -15,8 +15,8 @@ if (document.querySelectorAll('[data-container="bonus-card"]').length) {
 }
 
 // custom scrollbar
-if (document.querySelector('.detail-info__hold')) {
-    new SimpleBar(document.querySelector('.detail-info__hold'), {
+if (document.querySelector('.bonus-scroll')) {
+    new SimpleBar(document.querySelector('.bonus-scroll'), {
         autoHide: false
     });
 }
