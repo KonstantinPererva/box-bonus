@@ -13,19 +13,21 @@
 
 <body>
     <button class="open-popup-bonuses" data-open-content="bonus">Бонусы и пропозиции</button>
+
     <button class="open-popup-detail" data-open-content="detail">Детальная товара</button>
 
     <div class="detail" data-container="detail">
         <div class="detail__inner">
             <div class="detail__gallery">
                 <div class="detail-gallery-popup" data-popup="detail-popup">
-                    <div class="swiper-container goods-gallery swiper-container-initialized swiper-container-horizontal">
-                        <ul class="swiper-wrapper goods-gallery-list" style="transform: translate3d(0px, 0px, 0px);">
+                    <div class="swiper-container goods-gallery">
+                        <ul class="swiper-wrapper goods-gallery-list">
                             <li class="swiper-slide goods-gallery-list__item">
                                 <div class="goods-gallery-card">
                                     <img src="/upload/iblock/be9/be94a53e3246c1028bfd9a55608df3fa.jpeg" alt="Автомобильный освежитель воздуха AIR SURF Strawberry (клубника) (ароматизатор - подвеска с гелем) Dr. Marcus" class="goods-gallery-card__img">
                                 </div>
-                            </li></ul>
+                            </li>
+                        </ul>
 
                         <div class="goods-gallery-navigator">
                             <button type="button" class="goods-gallery-navigator__button goods-gallery-navigator__button_prev swiper-button-disabled" tabindex="0" role="button" aria-label="Previous slide" aria-disabled="true">
@@ -40,7 +42,9 @@
                                 </svg>
                             </button>
                         </div>
-                        <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div>
+
+                        <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
+                    </div>
 
                     <button type="button" class="detail-gallery-popup__close" data-close-popup="detail-popup">
                         <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -71,7 +75,7 @@
                             <div class="table-row">
                                 <div class="table-cell table-cell_hr table-cell-resizable" style="width: 70px;">
                                     <div class="table-cell__inner sort section">
-                                        <span class="table-cell__text table-cell__text_hr">Каталожный номер</span>
+                                        <span class="table-cell__text table-cell__text_hr">Кат. номер</span>
 
                                         <span class="table-cell__ico table-cell__ico_sort arr-down" data-sort="PROPERTY_CML2_ARTICLE" data-section_id=""></span>
                                     </div>

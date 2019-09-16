@@ -9,7 +9,7 @@ function ContainerDetail(node) {
 
     self.btnCloseGallery = self.node.querySelector('[data-close-popup]') || null;
     self.btnOpenGallery = self.node.querySelectorAll('[data-open-popup]') || null;
-    self.btnCloseContainerDetail = self.node.querySelector('[data-close-container="detail"]') || null;
+    self.btnCloseContentDetail = self.node.querySelector('[data-close-container="detail"]') || null;
 
     self.contentBonus = self.node.querySelector('[data-content="bonus__content"]') || null;
     self.contentTable = self.node.querySelector('[data-content="table-bonus"]') || null;
@@ -17,23 +17,24 @@ function ContainerDetail(node) {
     self.btnCloseContentTable = self.node.querySelector('[data-close-content="table-bonus"]') || null;
     self.btnOpenContentTable = self.node.querySelector('[data-open-content="table-bonus"]') || null;
     self.btnCloseContainerBonus = self.node.querySelector('[data-close-container="bonus"]') || null;
+
     self.btnOpenPopupBonus = document.querySelector('[data-open-content="bonus"]') || null;
     self.btnOpenPopupDetail = document.querySelector('[data-open-content="detail"]') || null;
 
     self.btnOpenContentDetail = self.node.querySelector('.table[data-table="bonus"] .table-body .table-row') || null;
 
-    self.openPopup = function () {
+    self.openPopup = function() {
         self.node.classList.add('open');
 
-        setTimeout(function () {
+        setTimeout(function() {
             if(self.substrateContainer){
                 self.substrateContainer.classList.add('open');
             }
         },10);
     };
 
-    self.closePopup = function () {
-        setTimeout(function () {
+    self.closePopup = function() {
+        setTimeout(function() {
             self.node.classList.remove('open');
         },300);
 
@@ -58,62 +59,70 @@ function ContainerDetail(node) {
         }
     };
 
-    self.openGallery = function () {
+    self.openGallery = function() {
         if(self.gallery){
             self.gallery.classList.add('open');
+            self.substrateGallery.classList.add('open');
         }
     };
 
-    self.closeGallery = function () {
+    self.closeGallery = function() {
         if(self.gallery){
             self.gallery.classList.remove('open');
+            self.substrateGallery.classList.remove('open');
         }
     };
 
-    self.btnOpenPopupBonus.addEventListener('click', function () {
+    self.openDetail = function() {
+        self.openPopup();
+        self.openContent(self.contentDetail);
+    };
+
+    self.openBonus = function() {
         self.openContent(self.contentBonus);
         self.openPopup();
         self.contentBonus.dataset.status = "main";
         self.contentDetail.dataset.status = "secondary";
-    });
+    };
 
-    self.btnOpenPopupDetail.addEventListener('click', function () {
-        self.openContent(self.contentDetail);
-        self.openPopup();
-    });
+    self.btnOpenPopupBonus.addEventListener('click', self.openBonus);
 
-    self.btnOpenContentTable.addEventListener('click', function () {
+    self.btnOpenPopupDetail.addEventListener('click', self.openDetail);
+
+    self.btnOpenContentTable.addEventListener('click', function() {
         self.openContent(self.contentTable);
     });
 
-    self.btnCloseContentTable.addEventListener('click', function () {
+    self.btnCloseContentTable.addEventListener('click', function() {
         self.closeContent(self.contentTable);
     });
 
-    self.btnOpenContentDetail.addEventListener('dblclick', function () {
+    self.btnOpenContentDetail.addEventListener('dblclick', function() {
         self.closeContent(self.contentBonus);
         self.openContent(self.contentDetail);
     });
 
-    self.btnCloseGallery.addEventListener('click', function () {
-        self.closeGallery();
-        self.openContent(self.contentTable);
-    });
-
-    self.btnCloseContainerDetail.addEventListener('click', function () {
+    self.btnCloseContentDetail.addEventListener('click', function() {
         if (self.contentBonus.dataset.status === "main") {
             self.openContent(self.contentBonus);
             self.openContent(self.contentTable);
-            self.closeContent(self.contentDetail);
-            self.closeGallery();
         } else {
-            self.closeGallery();
-            self.closeContent(self.contentDetail);
             self.closePopup();
         }
+
+        self.closeGallery();
+        self.closeContent(self.contentDetail);
     });
 
-    self.btnCloseContainerBonus.addEventListener('click', function () {
+    self.btnCloseGallery.addEventListener('click', function() {
+        if (self.contentBonus.dataset.status === "main") {
+            self.openContent(self.contentTable);
+        }
+
+        self.closeGallery();
+    });
+
+    self.btnCloseContainerBonus.addEventListener('click', function() {
         if (self.contentBonus.dataset.status === "main") {
             self.closeContent(self.contentTable);
             self.closeContent(self.contentBonus);
@@ -123,22 +132,9 @@ function ContainerDetail(node) {
         }
     });
 
-
-
-    // if(self.btnCloseGallery){
-    //     self.btnCloseGallery.addEventListener('click', self.closeGallery);
-    // }
-    //
-    // if(self.btnCloseContainer){
-    //     self.btnCloseContainer.addEventListener('click', function (){
-    //         self.closeContent(self.contentDetail);
-    //         self.closePopup();
-    //     })
-    // }
-
     if(self.btnOpenGallery.length){
         [].forEach.call(self.btnOpenGallery, function(btn) {
-            btn.addEventListener('click', function (){
+            btn.addEventListener('click', function() {
                 self.closeContent(self.contentTable);
                 self.openGallery();
             })
@@ -146,13 +142,13 @@ function ContainerDetail(node) {
     }
 
     if(self.substrateGallery){
-        self.substrateGallery.addEventListener('click', function () {
+        self.substrateGallery.addEventListener('click', function() {
             self.closeGallery();
         });
     }
 
     return {
-        // open: self.openPopup,
-        // close: self.closePopup,
+        open: self.openDetail,
+        openBonus: self.openBonus,
     }
 }
