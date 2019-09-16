@@ -30,3 +30,8 @@ if (document.querySelector('[data-scale="bonus"]')) {
         }
     });
 }
+
+// open bonus table
+$('.bonus-button').click(function () {
+    $('.bonus__table').addClass('open');
+});
