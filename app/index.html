@@ -12,18 +12,66 @@
 </head>
 
 <body>
-    <button class="open-popup-bonuses">Бонусы и пропозиции</button>
+    <button class="open-popup-bonuses" data-open-content="bonus">Бонусы и пропозиции</button>
+    <button class="open-popup-detail" data-open-content="detail">Детальная товара</button>
 
-    <div class="bonus" data-container="bonus">
-        <div class="bonus__inner">
-            <div class="bonus__table">
-                <div class="table" data-active="true" data-goods="table-list" style="width: 785px;">
-                    <div class="table-header" style="width: 100%;" data-width="785">
+    <div class="detail" data-container="detail">
+        <div class="detail__inner">
+            <div class="detail__gallery">
+                <div class="detail-gallery-popup" data-popup="detail-popup">
+                    <div class="swiper-container goods-gallery swiper-container-initialized swiper-container-horizontal">
+                        <ul class="swiper-wrapper goods-gallery-list" style="transform: translate3d(0px, 0px, 0px);">
+                            <li class="swiper-slide goods-gallery-list__item">
+                                <div class="goods-gallery-card">
+                                    <img src="/upload/iblock/be9/be94a53e3246c1028bfd9a55608df3fa.jpeg" alt="Автомобильный освежитель воздуха AIR SURF Strawberry (клубника) (ароматизатор - подвеска с гелем) Dr. Marcus" class="goods-gallery-card__img">
+                                </div>
+                            </li></ul>
+
+                        <div class="goods-gallery-navigator">
+                            <button type="button" class="goods-gallery-navigator__button goods-gallery-navigator__button_prev swiper-button-disabled" tabindex="0" role="button" aria-label="Previous slide" aria-disabled="true">
+                                <svg width="11" height="18" viewBox="0 0 11 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M9.54196 1.35168L1.8606 8.62764L9.54196 16.3517" stroke-width="2"></path>
+                                </svg>
+                            </button>
+
+                            <button type="button" class="goods-gallery-navigator__button goods-gallery-navigator__button_next swiper-button-disabled" tabindex="0" role="button" aria-label="Next slide" aria-disabled="true">
+                                <svg width="11" height="18" viewBox="0 0 11 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1.31863 16.3517L9 9.07572L1.31863 1.35169" stroke-width="2"></path>
+                                </svg>
+                            </button>
+                        </div>
+                        <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div>
+
+                    <button type="button" class="detail-gallery-popup__close" data-close-popup="detail-popup">
+                        <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0.646447 1.35355L11.6464 12.3535L12.3535 11.6464L1.35355 0.646447L0.646447 1.35355ZM11.6465 0.646452L0.646476 11.6464L1.35358 12.3536L12.3536 1.35356L11.6465 0.646452Z" fill="#545454"></path>
+                        </svg>
+                    </button>
+                </div>
+
+                <span class="detail__substrate detail__substrate_gallery" data-substrate-gallery="detail-substrate-gallery" style="display: none"></span>
+            </div>
+
+            <div class="wrapper-table-bonus" data-content="table-bonus">
+                <div class="table-bonus-button-back">
+                    <button type="button" class="button-back" data-close-content="table-bonus">
+							<span class="button-back__ico-wrap">
+								<svg width="13" height="21" viewBox="0 0 13 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M11.4737 1.60449L2 10.5782L11.4737 20.1045" stroke-width="2"></path>
+								</svg>
+							</span>
+
+                        <span class="button-back__text">Скрыть</span>
+                    </button>
+                </div>
+
+                <div class="table" style="width: 785px;" data-table="bonus">
+                    <div class="table-header" style="width: 785px;" data-width="785">
                         <div class="table-header__inner">
                             <div class="table-row">
                                 <div class="table-cell table-cell_hr table-cell-resizable" style="width: 70px;">
                                     <div class="table-cell__inner sort section">
-                                        <span class="table-cell__text table-cell__text_hr">Кат. номер</span>
+                                        <span class="table-cell__text table-cell__text_hr">Каталожный номер</span>
 
                                         <span class="table-cell__ico table-cell__ico_sort arr-down" data-sort="PROPERTY_CML2_ARTICLE" data-section_id=""></span>
                                     </div>
@@ -61,7 +109,7 @@
                                     <div class="table-cell__drag"></div>
                                 </div>
 
-                                <div class="table-cell table-cell_hr table-cell-resizable" style="width: 42px;">
+                                <div class="table-cell table-cell_hr table-cell-resizable" style="width: 40px;">
                                     <div class="table-cell__inner">
                                         <span class="table-cell__text table-cell__text_hr">Ост.</span>
 
@@ -71,7 +119,7 @@
                                     <div class="table-cell__drag"></div>
                                 </div>
 
-                                <div class="table-cell table-cell_hr table-cell-resizable" style="width: 74px;">
+                                <div class="table-cell table-cell_hr table-cell-resizable" style="width: 78px;">
                                     <div class="table-cell__inner">
                                         <span class="table-cell__text table-cell__text_hr">Цена</span>
 
@@ -137,19 +185,17 @@
                     <div class="table-body" data-simplebar="init" style="width: 100%;" data-width="785">
                         <div class="table-body__inner">
                             <div class="table-row  product-row tovar getProp" data-count_sum="4269"
-                                 data-img="/upload/iblock/763/763ae29561f85c909ae08ade17c8a8a0.jpeg"
-                                 data-price="16.98" data-id="3502"
-                                 data-analog="011974,011919,031293,031294" data-section="15942"
-                                 data-q="30" data-bonus="0.10188" data-new="0" data-extrabonus="0"
-                                 data-yy="Y">
-
+                                 data-img="/upload/iblock/c91/c91756d046942c9433e8aa4710596d56.jpeg"
+                                 data-price="16.98" data-id="3503" data-analog=""
+                                 data-section="15942" data-q="23" data-bonus="0.10188" data-new="0"
+                                 data-extrabonus="0" data-yy="Y">
                                 <div class="table-cell" style="width: 70px;">
-                                    <div class="table-cell__inner">031289</div>
+                                    <div class="table-cell__inner">031290</div>
                                 </div>
 
-                                <div class="table-cell col_4 name_3502" style="width: 310px;">
+                                <div class="table-cell col_4 name_3503" style="width: 310px;">
                                     <div class="table-cell__inner">
-                                        Автомобильный освежитель воздуха AIR SURF Black (черный)
+                                        Автомобильный освежитель воздуха AIR SURF Lemon (лимон)
                                         (ароматизатор - подвеска с гелем) Dr. Marcus
                                     </div>
                                 </div>
@@ -162,74 +208,11 @@
                                     <div class="table-cell__inner">шт</div>
                                 </div>
 
-                                <div class="table-cell col_7 quantity_3502"
-                                     data-admission="не указана" style="width: 42px;">
+                                <div class="table-cell col_7 quantity_3503" data-admission="не указана" style="width: 40px;">
                                     <div class="table-cell__inner">&gt;10</div>
                                 </div>
 
-                                <div class="table-cell col_8 price_3502" style="width: 74px;">
-                                    <div class="table-cell__inner">16.98</div>
-                                </div>
-
-                                <div class="table-cell" style="width: 74px;">
-                                    <div class="table-cell__inner">
-                                        <div class="quantity">
-                                            <button class="quantity__btn minus" type="button">
-                                                <svg height="2" width="10" viewBox="0 0 10 2"
-                                                     fill="none" class="quantity__ico">
-                                                    <rect width="10" height="1.42857"
-                                                          rx="0.714286"></rect>
-                                                </svg>
-                                            </button>
-
-                                            <input class="quantity__input" min="0" name="quantity"
-                                                   data-quantity="30" data-q="30" type="text"
-                                                   value="0">
-
-                                            <button class="quantity__btn plus" type="button">
-                                                <svg width="10" height="10" viewBox="0 0 10 10"
-                                                     fill="none" class="quantity__ico">
-                                                    <path d="M0 5C0 4.60551 0.319797 4.28571 0.714286 4.28571H9.28571C9.6802 4.28571 10 4.60551 10 5C10 5.39449 9.6802 5.71429 9.28571 5.71429H0.714286C0.319797 5.71429 0 5.39449 0 5Z"></path>
-                                                    <path d="M5 10C4.60551 10 4.28571 9.6802 4.28571 9.28571V0.714286C4.28571 0.319797 4.60551 0 5 0C5.39449 0 5.71429 0.319797 5.71429 0.714286V9.28571C5.71429 9.6802 5.39449 10 5 10Z"></path>
-                                                </svg>
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-                                <input class="hidden-count" type="hidden" value="1">
-                                <input class="hidden-count_sum" type="hidden" value="4269">
-                            </div> <!-- end table-row -->
-
-                            <div class="table-row  product-row tovar getProp" data-count_sum="4269"
-                                 data-img="/upload/iblock/c91/c91756d046942c9433e8aa4710596d56.jpeg"
-                                 data-price="16.98" data-id="3503" data-analog=""
-                                 data-section="15942" data-q="23" data-bonus="0.10188" data-new="0"
-                                 data-extrabonus="0" data-yy="Y">
-                                <div class="table-cell" style="width: 100px;">
-                                    <div class="table-cell__inner">031290</div>
-                                </div>
-
-                                <div class="table-cell col_4 name_3503">
-                                    <div class="table-cell__inner">
-                                        Автомобильный освежитель воздуха AIR SURF Lemon (лимон)
-                                        (ароматизатор - подвеска с гелем) Dr. Marcus
-                                    </div>
-                                </div>
-
-                                <div class="table-cell" style="width: 200px;">
-                                    <div class="table-cell__inner">Doctor Marcus, Польша</div>
-                                </div>
-
-                                <div class="table-cell" style="width: 70px;">
-                                    <div class="table-cell__inner">шт</div>
-                                </div>
-
-                                <div class="table-cell col_7 quantity_3503"
-                                     data-admission="не указана" style="width: 70px;">
-                                    <div class="table-cell__inner">&gt;10</div>
-                                </div>
-
-                                <div class="table-cell col_8 price_3503" style="width: 70px;">
+                                <div class="table-cell col_8 price_3503" style="width: 78px;">
                                     <div class="table-cell__inner">16.98</div>
                                 </div>
 
@@ -258,17 +241,201 @@
                                         </div>
                                     </div>
                                 </div>
-                                <input class="hidden-count" type="hidden" value="1">
-                                <input class="hidden-count_sum" type="hidden" value="4269">
                             </div> <!-- end table-row -->
                         </div> <!-- end table-body__inner -->
                     </div> <!-- end table-body table-body_first -->
                 </div>
             </div>
 
+            <div class="detail__content product-row" data-content="detail__content" data-id="3515">
+                <div class="detail-goods">
+                    <div class="detail-goods__button-back">
+                        <button type="button" class="button-back" data-close-container="detail">
+							<span class="button-back__ico-wrap">
+								<svg width="13" height="21" viewBox="0 0 13 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M11.4737 1.60449L2 10.5782L11.4737 20.1045" stroke-width="2"></path>
+								</svg>
+							</span>
+
+                            <span class="button-back__text">Назад</span>
+                        </button>
+                    </div>
+
+                    <div class="detail-goods__hold">
+                        <div class="goods-picture">
+                            <div class="goods-picture__img-wrap" data-open-popup="detail-popup">
+                                <img src="/upload/iblock/be9/be94a53e3246c1028bfd9a55608df3fa.jpeg" alt="goods" class="goods-picture__img">
+
+                                <span class="goods-picture__substrate">
+									<svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M6.72766 0C3.02034 0 0 3.02031 0 6.72765C0 10.435 3.02034 13.4553 6.72766 13.4553C8.33105 13.4553 9.80383 12.8885 10.9615 11.9474L15.5142 16.5002C15.786 16.7719 16.2284 16.772 16.5002 16.5002C16.772 16.2284 16.772 15.7932 16.5002 15.5215L11.9474 10.9687C12.8904 9.81049 13.4553 8.33283 13.4553 6.72765C13.4553 3.02031 10.435 0 6.72766 0ZM6.72766 1.39193C9.68272 1.39193 12.0634 3.77258 12.0634 6.72765C12.0634 9.6827 9.68272 12.0634 6.72766 12.0634C3.77261 12.0634 1.39193 9.6827 1.39193 6.72765C1.39193 3.77258 3.7726 1.39193 6.72766 1.39193Z" fill="white"></path>
+									</svg>
+								</span>
+                            </div>
+
+                            <div class="goods-picture__img-small">
+                                <ul class="img-small-list"></ul>
+                            </div>
+                        </div>
+
+                        <h2 class="goods-title">
+                            <span class="goods-title__text">Автомобильный освежитель воздуха AIR SURF Strawberry (клубника) (ароматизатор - подвеска с гелем) Dr. Marcus</span>
+                        </h2>
+
+                        <div class="detail-available-favorite">
+                            <div class="goods-available">
+                                <div class="available">
+							<span class="available__ico">
+								<svg width="10" height="11" viewBox="0 0 10 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M9.32958 2.88533C8.88246 2.11932 8.27596 1.51282 7.50993 1.06572C6.74376 0.618637 5.90738 0.395142 5.00015 0.395142C4.09301 0.395142 3.25638 0.618637 2.49035 1.06572C1.72427 1.51275 1.11777 2.11925 0.670645 2.88533C0.223495 3.65145 0 4.48808 0 5.39515C0 6.30227 0.223564 7.13876 0.670577 7.90493C1.11768 8.67094 1.72418 9.27744 2.49026 9.72459C3.25638 10.1716 4.09294 10.3952 5.00006 10.3952C5.90717 10.3952 6.74383 10.1716 7.5099 9.72459C8.27593 9.2776 8.88241 8.67094 9.32949 7.90493C9.77651 7.13883 9.99998 6.30222 9.99998 5.39515C10 4.48799 9.77651 3.65134 9.32958 2.88533ZM8.24214 4.63343L4.70706 8.16854C4.62458 8.25108 4.52481 8.29231 4.40756 8.29231C4.29473 8.29231 4.19711 8.25108 4.1146 8.16854L1.75775 5.81181C1.67971 5.73362 1.64061 5.63616 1.64061 5.51886C1.64061 5.39737 1.67958 5.29746 1.75775 5.21932L2.3502 4.63343C2.43277 4.55097 2.5303 4.50975 2.64322 4.50975C2.75614 4.50975 2.85381 4.551 2.93624 4.63343L4.40763 6.10477L7.06387 3.45505C7.14635 3.37257 7.24397 3.33132 7.35682 3.33132C7.46959 3.33132 7.56737 3.37257 7.64978 3.45505L8.24223 4.04102C8.32049 4.1191 8.35944 4.21891 8.35944 4.34041C8.35944 4.45764 8.32049 4.55531 8.24214 4.63343Z"></path>
+								</svg>
+							</span>
+                                    <span class="available__text">В наличии</span>
+                                </div>
+                            </div>
+
+                            <div class="goods-favorite">
+                                <div class="favorite">
+                                    <button class="favorite__button card-item-favorite_active" type="button">
+                                        <svg class="favorite__ico" width="22" height="20" viewBox="0 0 22 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M10.2268 18.5031C10.4408 18.6904 10.7153 18.7936 11 18.7936C11.2846 18.7936 11.5592 18.6904 11.773 18.5034C12.5828 17.7952 13.363 17.1302 14.0515 16.5437L14.0517 16.5434C16.0662 14.8266 17.8059 13.344 19.0165 11.8832C20.3698 10.2503 21 8.70203 21 7.01059C21 5.36722 20.4366 3.8511 19.4135 2.74133C18.3782 1.61844 16.9575 1 15.413 1C14.2585 1 13.2012 1.36499 12.2706 2.08475C11.8008 2.44806 11.3752 2.8927 11 3.41135C10.6249 2.8927 10.1992 2.44806 9.72955 2.08475C8.79892 1.36499 7.74164 1 6.58716 1C5.04251 1 3.62192 1.61844 2.58661 2.74133C1.56351 3.8511 1 5.36722 1 7.01059C1 8.70203 1.63034 10.2503 2.98364 11.8833C4.19427 13.3441 5.93423 14.8269 7.94916 16.544L7.95267 16.547C8.63992 17.1327 9.41888 17.7966 10.2268 18.5031Z"></path>
+                                        </svg>
+                                    </button>
+
+                                    <span class="favorite__text">В избранное</span>
+                                </div>
+                            </div>
+
+                            <div id="with_from_yy" style="display: inline-block;" title="безналичный расчет невозможен"></div>
+
+                        </div>
+
+                        <div class="detail-goods-box-scroll">
+                            <div class="detail-goods-box-scroll__hold">
+                                <div class="goods-table-data">
+                                    <div class="table-data">
+                                        <div class="table-data__group">
+                                            <div class="table-data__row">
+                                                <span class="table-data__property">Количество в упаковке</span>
+                                                <span class="table-data__value">18 шт</span>
+                                            </div>
+                                        </div>
+                                        <div class="table-data__group">
+                                            <div class="table-data__row">
+                                                <span class="table-data__property">Рекомендуемая розничная цена</span>
+                                                <span class="table-data__value">20.40 грн</span>
+                                            </div>
+
+                                            <div class="table-data__row detail-price" data-price="16.98">
+                                                <span class="table-data__property">С Вашей скидкой</span>
+                                                <span class="table-data__value">16.98 грн</span>
+                                            </div>
+                                        </div>
+                                        <div class="table-data__group">
+                                            <div class="table-data__row">
+                                                <span class="table-data__property">Бонус за товар</span>
+                                                <span class="table-data__value">0.10</span>
+                                            </div></div>
+                                        <div class="table-data__group">
+                                            <div class="table-data__row">
+                                                <span class="table-data__property">Количество заказа:</span>
+
+                                                <span class="table-data__value">
+									<div class="quantity">
+										<button class="quantity__btn minus" type="button">
+											<svg height="2" width="10" viewBox="0 0 10 2" fill="none" class="quantity__ico">
+												<rect width="10" height="1.42857" rx="0.714286"></rect>
+											</svg>
+										</button>
+
+										<input class="quantity__input" min="0" name="quantity" data-quantity="44" data-q="44" type="text" value="0">
+
+										<button class="quantity__btn plus" type="button">
+											<svg width="10" height="10" viewBox="0 0 10 10" fill="none" class="quantity__ico">
+												<path d="M0 5C0 4.60551 0.319797 4.28571 0.714286 4.28571H9.28571C9.6802 4.28571 10 4.60551 10 5C10 5.39449 9.6802 5.71429 9.28571 5.71429H0.714286C0.319797 5.71429 0 5.39449 0 5Z"></path>
+												<path d="M5 10C4.60551 10 4.28571 9.6802 4.28571 9.28571V0.714286C4.28571 0.319797 4.60551 0 5 0C5.39449 0 5.71429 0.319797 5.71429 0.714286V9.28571C5.71429 9.6802 5.39449 10 5 10Z"></path>
+											</svg>
+										</button>
+									</div>
+								</span>
+                                            </div>
+
+                                            <div class="table-data__row detail-total-price">
+                                                <span class="table-data__property">Итого</span>
+                                                <span class="table-data__value">16.98 грн</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="goods-warning">
+                                    <div class="warning">
+                                        <span class="warning__text"></span>
+                                    </div>
+                                </div>
+
+                                <div class="goods-box" data-container="goods-box">
+                                    <div class="goods-box-title" data-button="goods-box-title">
+                                        <div class="goods-box-title__wrap">
+											<span class="goods-box-title__ico">
+												<img height="20" src="/local/templates/catalog_page/images/svg/tablet.svg" alt="ico">
+											</span>
+
+                                            <span class="goods-box-title__text">Описание товара</span>
+                                        </div>
+
+                                        <span class="goods-box-title__ico-wrap" data-indicator="plus">
+											<svg width="10" height="2" viewBox="0 0 10 2" fill="none" xmlns="http://www.w3.org/2000/svg" style="display: none">
+												<rect width="10" height="1.42857" rx="0.714286" fill="#344E9F"></rect>
+											</svg>
+
+											<svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path class="ico-item" d="M0 5C0 4.60551 0.319797 4.28571 0.714286 4.28571H9.28571C9.6802 4.28571 10 4.60551 10 5C10 5.39449 9.6802 5.71429 9.28571 5.71429H0.714286C0.319797 5.71429 0 5.39449 0 5Z" fill="#344E9F"></path>
+												<path d="M5 10C4.60551 10 4.28571 9.6802 4.28571 9.28571V0.714286C4.28571 0.319797 4.60551 0 5 0C5.39449 0 5.71429 0.319797 5.71429 0.714286V9.28571C5.71429 9.6802 5.39449 10 5 10Z" fill="#344E9F"></path>
+											</svg>
+										</span>
+                                    </div>
+
+                                    <div class="goods-descr" data-box="descr">
+                                        <p class="goods-descr__text">Автомобильный освежитель воздуха AIR SURF Strawberry (клубника) (ароматизатор - подвеска с гелем) Dr. Marcus</p>
+                                    </div>
+                                </div>
+
+                                <div class="goods-box" data-container="goods-box">
+                                    <div class="goods-box-title" data-button="goods-box-title">
+                                        <div class="goods-box-title__wrap">
+											<span class="goods-box-title__ico">
+												<img height="20" src="/local/templates/catalog_page/images/svg/schedule.svg" alt="ico">
+											</span>
+
+                                            <span class="goods-box-title__text">Характеристики товара</span>
+                                        </div>
+
+                                        <span class="goods-box-title__ico-wrap" data-indicator="plus">
+												<svg width="10" height="2" viewBox="0 0 10 2" fill="none" xmlns="http://www.w3.org/2000/svg" style="display: none">
+													<rect width="10" height="1.42857" rx="0.714286" fill="#344E9F"></rect>
+												</svg>
+
+												<svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path class="ico-item" d="M0 5C0 4.60551 0.319797 4.28571 0.714286 4.28571H9.28571C9.6802 4.28571 10 4.60551 10 5C10 5.39449 9.6802 5.71429 9.28571 5.71429H0.714286C0.319797 5.71429 0 5.39449 0 5Z" fill="#344E9F"></path>
+													<path d="M5 10C4.60551 10 4.28571 9.6802 4.28571 9.28571V0.714286C4.28571 0.319797 4.60551 0 5 0C5.39449 0 5.71429 0.319797 5.71429 0.714286V9.28571C5.71429 9.6802 5.39449 10 5 10Z" fill="#344E9F"></path>
+												</svg>
+											</span>
+                                    </div>
+
+                                    <div class="goods-characteristics" data-box="characteristics">
+                                        <ul class="goods-characteristics-list"></ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div> <!-- end detail-goods__hold -->
+                </div> <!-- end detail-goods -->
+            </div>
+
             <div class="bonus__content" data-content="bonus__content">
-                <div class="bonus-info">
-                    <div class="bonus-info__button-back">
+                <div class="bonus-hold">
+                    <div class="bonus-hold__button-back">
                         <button type="button" class="button-back" data-close-container="bonus">
                                 <span class="button-back__ico-wrap">
                                     <svg width="13" height="21" viewBox="0 0 13 21" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -280,7 +447,7 @@
                         </button>
                     </div>
 
-                    <div class="bonus-info__hold">
+                    <div class="bonus-hold__inner">
                         <div class="bonus-scroll">
                             <!-- bonus -1 -->
                             <div class="bonus-card" data-container="bonus-card">
@@ -339,7 +506,7 @@
                                     </div>
 
                                     <div class="bonus-card-content__button">
-                                        <button class="bonus-button bonus-button_blue">Подобрать товары</button>
+                                        <button class="bonus-button bonus-button_blue" data-open-content="table-bonus">Подобрать товары</button>
                                     </div>
 
                                     <div class="bonus-card-content__data">
@@ -390,7 +557,7 @@
                                                     <span class="scale-mark__line"></span>
 
                                                     <span class="scale-mark__img scale-mark__img_left" data-slave="bonus">
-                                                        <div class="bonus-picture">
+                                                        <div class="bonus-picture" title="Отвертка Брелок-фонарик CrV 4 биты СИЛА">
                                                             <span class="bonus-picture__img">
                                                                 <img src="images/gift-2.jpg" alt="gift" />
                                                             </span>
@@ -442,7 +609,7 @@
                                     </div>
 
                                     <div class="bonus-card-content__button">
-                                        <button class="bonus-button bonus-button_blue">Подобрать товары</button>
+                                        <button class="bonus-button bonus-button_blue" data-open-content="table-bonus">Подобрать товары</button>
                                     </div>
 
                                     <div class="bonus-card-content__data">
@@ -521,7 +688,7 @@
                                     </div>
 
                                     <div class="bonus-card-content__button">
-                                        <button class="bonus-button bonus-button_blue">Подобрать товары</button>
+                                        <button class="bonus-button bonus-button_blue" data-open-content="table-bonus">Подобрать товары</button>
                                     </div>
 
                                     <div class="bonus-card-content__data">
@@ -623,7 +790,7 @@
                                     </div>
 
                                     <div class="bonus-card-content__button">
-                                        <button class="bonus-button bonus-button_blue">Подобрать товары</button>
+                                        <button class="bonus-button bonus-button_blue" data-open-content="table-bonus">Подобрать товары</button>
                                     </div>
 
                                     <div class="bonus-card-content__data">
@@ -704,7 +871,19 @@
                                     </div>
 
                                     <div class="bonus-card-content__button">
-                                        <button class="bonus-button bonus-button_blue">Укомплектовать заказ</button>
+                                        <button class="bonus-button bonus-button_blue" data-open-content="table-bonus">Укомплектовать заказ</button>
+
+                                        <div class="bonus-info">
+                                            <span class="bonus-info__ico">
+                                                <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M5 0C2.24308 0 0 2.24292 0 5C0 7.75708 2.24308 10 5 10C7.75692 10 10 7.75708 10 5C10 2.24292 7.75692 0 5 0ZM5 9.38462C2.58231 9.38462 0.615385 7.41769 0.615385 5C0.615385 2.58231 2.58231 0.615385 5 0.615385C7.41769 0.615385 9.38462 2.58231 9.38462 5C9.38462 7.41769 7.41769 9.38462 5 9.38462Z" fill="#344E9F"/>
+                                                    <path d="M5.01462 3.52093C5.29883 3.52093 5.52923 3.29053 5.52923 3.00631C5.52923 2.7221 5.29883 2.4917 5.01462 2.4917C4.7304 2.4917 4.5 2.7221 4.5 3.00631C4.5 3.29053 4.7304 3.52093 5.01462 3.52093Z" fill="#344E9F"/>
+                                                    <path d="M5.015 4.36035C4.73072 4.36035 4.5 4.4982 4.5 4.66804V7.28343C4.5 7.45327 4.73072 7.59112 5.015 7.59112C5.29928 7.59112 5.53 7.45327 5.53 7.28343V4.66804C5.53 4.49804 5.29928 4.36035 5.015 4.36035Z" fill="#344E9F"/>
+                                                </svg>
+                                            </span>
+
+                                            <span class="bonus-info__tooltip">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A aperiam eius error inventore itaque nisi odio tempore velit veniam voluptatem?</span>
+                                        </div>
                                     </div>
 
                                     <div class="bonus-card-content__data">
@@ -861,7 +1040,19 @@
                                     </div>
 
                                     <div class="bonus-card-content__button">
-                                        <button class="bonus-button bonus-button_blue">Укомплектовать заказ</button>
+                                        <button class="bonus-button bonus-button_blue" data-open-content="table-bonus">Укомплектовать заказ</button>
+
+                                        <div class="bonus-info">
+                                            <span class="bonus-info__ico">
+                                                <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M5 0C2.24308 0 0 2.24292 0 5C0 7.75708 2.24308 10 5 10C7.75692 10 10 7.75708 10 5C10 2.24292 7.75692 0 5 0ZM5 9.38462C2.58231 9.38462 0.615385 7.41769 0.615385 5C0.615385 2.58231 2.58231 0.615385 5 0.615385C7.41769 0.615385 9.38462 2.58231 9.38462 5C9.38462 7.41769 7.41769 9.38462 5 9.38462Z" fill="#344E9F"/>
+                                                    <path d="M5.01462 3.52093C5.29883 3.52093 5.52923 3.29053 5.52923 3.00631C5.52923 2.7221 5.29883 2.4917 5.01462 2.4917C4.7304 2.4917 4.5 2.7221 4.5 3.00631C4.5 3.29053 4.7304 3.52093 5.01462 3.52093Z" fill="#344E9F"/>
+                                                    <path d="M5.015 4.36035C4.73072 4.36035 4.5 4.4982 4.5 4.66804V7.28343C4.5 7.45327 4.73072 7.59112 5.015 7.59112C5.29928 7.59112 5.53 7.45327 5.53 7.28343V4.66804C5.53 4.49804 5.29928 4.36035 5.015 4.36035Z" fill="#344E9F"/>
+                                                </svg>
+                                            </span>
+
+                                            <span class="bonus-info__tooltip">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A aperiam eius error inventore itaque nisi odio tempore velit veniam voluptatem?</span>
+                                        </div>
                                     </div>
 
                                     <div class="bonus-card-content__data">
@@ -947,9 +1138,21 @@
                                     </div>
 
                                     <div class="bonus-card-content__button">
-                                        <button class="bonus-button bonus-button_blue">Укомплектовать заказ</button>
+                                        <button class="bonus-button bonus-button_blue" data-open-content="table-bonus">Укомплектовать заказ</button>
 
                                         <button class="bonus-button bonus-button_red">Удалить комплект</button>
+
+                                        <div class="bonus-info">
+                                            <span class="bonus-info__ico">
+                                                <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M5 0C2.24308 0 0 2.24292 0 5C0 7.75708 2.24308 10 5 10C7.75692 10 10 7.75708 10 5C10 2.24292 7.75692 0 5 0ZM5 9.38462C2.58231 9.38462 0.615385 7.41769 0.615385 5C0.615385 2.58231 2.58231 0.615385 5 0.615385C7.41769 0.615385 9.38462 2.58231 9.38462 5C9.38462 7.41769 7.41769 9.38462 5 9.38462Z" fill="#344E9F"/>
+                                                    <path d="M5.01462 3.52093C5.29883 3.52093 5.52923 3.29053 5.52923 3.00631C5.52923 2.7221 5.29883 2.4917 5.01462 2.4917C4.7304 2.4917 4.5 2.7221 4.5 3.00631C4.5 3.29053 4.7304 3.52093 5.01462 3.52093Z" fill="#344E9F"/>
+                                                    <path d="M5.015 4.36035C4.73072 4.36035 4.5 4.4982 4.5 4.66804V7.28343C4.5 7.45327 4.73072 7.59112 5.015 7.59112C5.29928 7.59112 5.53 7.45327 5.53 7.28343V4.66804C5.53 4.49804 5.29928 4.36035 5.015 4.36035Z" fill="#344E9F"/>
+                                                </svg>
+                                            </span>
+
+                                            <span class="bonus-info__tooltip">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A aperiam eius error inventore itaque nisi odio tempore velit veniam voluptatem?</span>
+                                        </div>
                                     </div>
 
                                     <div class="bonus-card-content__data">
@@ -1010,7 +1213,19 @@
                                     </div>
 
                                     <div class="bonus-card-content__button">
-                                        <button class="bonus-button bonus-button_blue">Подобрать товары</button>
+                                        <button class="bonus-button bonus-button_blue" data-open-content="table-bonus">Подобрать товары</button>
+
+                                        <div class="bonus-info">
+                                            <span class="bonus-info__ico">
+                                                <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M5 0C2.24308 0 0 2.24292 0 5C0 7.75708 2.24308 10 5 10C7.75692 10 10 7.75708 10 5C10 2.24292 7.75692 0 5 0ZM5 9.38462C2.58231 9.38462 0.615385 7.41769 0.615385 5C0.615385 2.58231 2.58231 0.615385 5 0.615385C7.41769 0.615385 9.38462 2.58231 9.38462 5C9.38462 7.41769 7.41769 9.38462 5 9.38462Z" fill="#344E9F"/>
+                                                    <path d="M5.01462 3.52093C5.29883 3.52093 5.52923 3.29053 5.52923 3.00631C5.52923 2.7221 5.29883 2.4917 5.01462 2.4917C4.7304 2.4917 4.5 2.7221 4.5 3.00631C4.5 3.29053 4.7304 3.52093 5.01462 3.52093Z" fill="#344E9F"/>
+                                                    <path d="M5.015 4.36035C4.73072 4.36035 4.5 4.4982 4.5 4.66804V7.28343C4.5 7.45327 4.73072 7.59112 5.015 7.59112C5.29928 7.59112 5.53 7.45327 5.53 7.28343V4.66804C5.53 4.49804 5.29928 4.36035 5.015 4.36035Z" fill="#344E9F"/>
+                                                </svg>
+                                            </span>
+
+                                            <span class="bonus-info__tooltip">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A aperiam eius error inventore itaque nisi odio tempore velit veniam voluptatem?</span>
+                                        </div>
                                     </div>
 
                                     <div class="bonus-card-content__data">
@@ -1081,7 +1296,19 @@
                                     </div>
 
                                     <div class="bonus-card-content__button">
-                                        <button class="bonus-button bonus-button_blue">Подобрать товары</button>
+                                        <button class="bonus-button bonus-button_blue" data-open-content="table-bonus">Подобрать товары</button>
+
+                                        <div class="bonus-info">
+                                            <span class="bonus-info__ico">
+                                                <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M5 0C2.24308 0 0 2.24292 0 5C0 7.75708 2.24308 10 5 10C7.75692 10 10 7.75708 10 5C10 2.24292 7.75692 0 5 0ZM5 9.38462C2.58231 9.38462 0.615385 7.41769 0.615385 5C0.615385 2.58231 2.58231 0.615385 5 0.615385C7.41769 0.615385 9.38462 2.58231 9.38462 5C9.38462 7.41769 7.41769 9.38462 5 9.38462Z" fill="#344E9F"/>
+                                                    <path d="M5.01462 3.52093C5.29883 3.52093 5.52923 3.29053 5.52923 3.00631C5.52923 2.7221 5.29883 2.4917 5.01462 2.4917C4.7304 2.4917 4.5 2.7221 4.5 3.00631C4.5 3.29053 4.7304 3.52093 5.01462 3.52093Z" fill="#344E9F"/>
+                                                    <path d="M5.015 4.36035C4.73072 4.36035 4.5 4.4982 4.5 4.66804V7.28343C4.5 7.45327 4.73072 7.59112 5.015 7.59112C5.29928 7.59112 5.53 7.45327 5.53 7.28343V4.66804C5.53 4.49804 5.29928 4.36035 5.015 4.36035Z" fill="#344E9F"/>
+                                                </svg>
+                                            </span>
+
+                                            <span class="bonus-info__tooltip">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A aperiam eius error inventore itaque nisi odio tempore velit veniam voluptatem?</span>
+                                        </div>
                                     </div>
 
                                     <div class="bonus-card-content__data">

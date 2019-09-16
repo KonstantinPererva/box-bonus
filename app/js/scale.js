@@ -1,4 +1,6 @@
 function Scale(node) {
+    if (!node) { return; }
+
     var _S = this;
     _S.slave = null;
     _S.wrapper = null;
@@ -21,7 +23,9 @@ function Scale(node) {
             var data = parseInt(_S.leading.dataset.leading, 10);
 
             if (pos <= data) {
-                mark.slave.classList.add('active');
+                mark.slave.classList.add('bonus-active');
+            } else {
+                mark.slave.classList.remove('bonus-active');
             }
         })
     };
@@ -33,7 +37,7 @@ function Scale(node) {
 
     _S.parentSearch = function(el) {
         var parent = el.parentElement;
-3
+
         if (parent.dataset.card === "bonus") {
             return _S.wrapper = parent;
         }
@@ -67,6 +71,11 @@ function Scale(node) {
         })
     };
 
+    _S.recalculateScale = function() {
+        _S.fullness();
+        _S.activeBonus();
+    };
+
     _S.init = function() {
         _S.positionMark();
         _S.setLeading();
@@ -76,6 +85,6 @@ function Scale(node) {
 
     return {
         init: _S.init,
-
+        recalculate: _S.recalculateScale
     }
 }
