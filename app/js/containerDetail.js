@@ -2,19 +2,23 @@ function ContainerDetail(node) {
     var self = this;
     self.node = node || null;
 
+    self.contentDetail = self.node.querySelector('[data-content="detail__content"]') || null;
     self.gallery = self.node.querySelector('[data-popup]') || null;
+    self.substrateGallery = self.node.querySelector('[data-substrate-gallery]') || null;
+    self.substrateContainer = self.node.querySelector('[data-substrate-container]') || null;
+
     self.btnCloseGallery = self.node.querySelector('[data-close-popup]') || null;
     self.btnOpenGallery = self.node.querySelectorAll('[data-open-popup]') || null;
-    self.btnCloseContainer = self.node.querySelector('[data-close-container]') || null;
-    self.contentDetail = self.node.querySelector('[data-content="detail__content"]') || null;
-    self.substrateContainer = self.node.querySelector('[data-substrate-container]') || null;
-    self.substrateGallery = self.node.querySelector('[data-substrate-gallery]') || null;
+    self.btnCloseContainerDetail = self.node.querySelector('[data-close-container="detail"]') || null;
 
     self.contentBonus = self.node.querySelector('[data-content="bonus__content"]') || null;
     self.contentTable = self.node.querySelector('[data-content="table-bonus"]') || null;
+
     self.btnCloseContentTable = self.node.querySelector('[data-close-content="table-bonus"]') || null;
     self.btnOpenContentTable = self.node.querySelector('[data-open-content="table-bonus"]') || null;
-    self.btnOpenContentBonus = document.querySelector('[data-open-content="bonus"]') || null;
+    self.btnCloseContainerBonus = self.node.querySelector('[data-close-container="bonus"]') || null;
+    self.btnOpenPopupBonus = document.querySelector('[data-open-content="bonus"]') || null;
+    self.btnOpenPopupDetail = document.querySelector('[data-open-content="detail"]') || null;
 
     self.btnOpenContentDetail = self.node.querySelector('.table[data-table="bonus"] .table-body .table-row') || null;
 
@@ -66,8 +70,15 @@ function ContainerDetail(node) {
         }
     };
 
-    self.btnOpenContentBonus.addEventListener('click', function () {
+    self.btnOpenPopupBonus.addEventListener('click', function () {
         self.openContent(self.contentBonus);
+        self.openPopup();
+        self.contentBonus.dataset.status = "main";
+        self.contentDetail.dataset.status = "secondary";
+    });
+
+    self.btnOpenPopupDetail.addEventListener('click', function () {
+        self.openContent(self.contentDetail);
         self.openPopup();
     });
 
@@ -87,6 +98,29 @@ function ContainerDetail(node) {
     self.btnCloseGallery.addEventListener('click', function () {
         self.closeGallery();
         self.openContent(self.contentTable);
+    });
+
+    self.btnCloseContainerDetail.addEventListener('click', function () {
+        if (self.contentBonus.dataset.status === "main") {
+            self.openContent(self.contentBonus);
+            self.openContent(self.contentTable);
+            self.closeContent(self.contentDetail);
+            self.closeGallery();
+        } else {
+            self.closeGallery();
+            self.closeContent(self.contentDetail);
+            self.closePopup();
+        }
+    });
+
+    self.btnCloseContainerBonus.addEventListener('click', function () {
+        if (self.contentBonus.dataset.status === "main") {
+            self.closeContent(self.contentTable);
+            self.closeContent(self.contentBonus);
+            self.closePopup();
+            self.contentBonus.dataset.status = "secondary";
+            self.contentDetail.dataset.status = "main";
+        }
     });
 
 
@@ -114,7 +148,6 @@ function ContainerDetail(node) {
     if(self.substrateGallery){
         self.substrateGallery.addEventListener('click', function () {
             self.closeGallery();
-            self.closePopup();
         });
     }
 
