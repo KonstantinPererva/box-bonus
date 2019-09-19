@@ -1,26 +1,26 @@
 function Scale(node) {
     if (!node) { return; }
 
-    var _S = this;
-    _S.slave = null;
-    _S.wrapper = null;
-    _S.leading = null;
+    var self = this;
+    self.slave = null;
+    self.wrapper = null;
+    self.leading = null;
 
-    _S.node = node || null;
+    self.node = node || null;
 
-    _S.min = _S.node.dataset.min || null;
-    _S.max = _S.node.dataset.max || null;
-    _S.dif = parseInt(_S.max, 10) - parseInt(_S.min, 10);
+    self.min = self.node.dataset.min || null;
+    self.max = self.node.dataset.max || null;
+    self.dif = parseInt(self.max, 10) - parseInt(self.min, 10);
 
-    _S.mark = _S.node.querySelectorAll('[data-mark]') || null;
-    _S.band = _S.node.querySelector('[data-band]') || null;
+    self.mark = self.node.querySelectorAll('[data-mark]') || null;
+    self.band = self.node.querySelector('[data-band]') || null;
 
-    _S.activeBonus = function() {
-        [].forEach.call(_S.mark, function (mark) {
+    self.activeBonus = function() {
+        [].forEach.call(self.mark, function (mark) {
             mark.slave = mark.querySelector('[data-slave]');
 
             var pos = parseInt(mark.dataset.position, 10);
-            var data = parseInt(_S.leading.dataset.leading, 10);
+            var data = parseInt(self.leading.dataset.leading, 10);
 
             if (pos <= data) {
                 mark.slave.classList.add('bonus-active');
@@ -30,40 +30,40 @@ function Scale(node) {
         })
     };
 
-    _S.setLeading = function() {
-        _S.parentSearch(_S.node);
-        _S.leading = _S.wrapper.querySelector('[data-leading]') || null;
+    self.setLeading = function() {
+        self.parentSearch(self.node);
+        self.leading = self.wrapper.querySelector('[data-leading]') || null;
     };
 
-    _S.parentSearch = function(el) {
+    self.parentSearch = function(el) {
         var parent = el.parentElement;
 
         if (parent.dataset.card === "bonus") {
-            return _S.wrapper = parent;
+            return self.wrapper = parent;
         }
 
-        _S.parentSearch(parent);
+        self.parentSearch(parent);
     };
 
-    _S.fullness = function() {
-        var data = _S.leading.dataset.leading;
-        var per = (parseInt(data, 10) - _S.min) * 100 / _S.dif;
+    self.fullness = function() {
+        var data = self.leading.dataset.leading;
+        var per = (parseInt(data, 10) - self.min) * 100 / self.dif;
 
         if (per > 100) {
-            _S.band.style.width = "100%";
+            self.band.style.width = "100%";
         } else if (per < 0) {
-            _S.band.style.width = "0";
+            self.band.style.width = "0";
         } else {
-            _S.band.style.width = per + "%";
+            self.band.style.width = per + "%";
         }
     };
 
-    _S.positionMark = function() {
-        [].forEach.call(_S.mark, function (mark, ind) {
+    self.positionMark = function() {
+        [].forEach.call(self.mark, function (mark, ind) {
             var pos = mark.dataset.position;
-            var per = (parseInt(pos, 10) - _S.min) * 100 / _S.dif;
+            var per = (parseInt(pos, 10) - self.min) * 100 / self.dif;
 
-            if (_S.mark[0] === _S.mark[ind]) {
+            if (self.mark[0] === self.mark[ind]) {
                 mark.style.left = per + "%";
             } else {
                 mark.style.left = "calc(" + per + "% - 1px)";
@@ -71,20 +71,20 @@ function Scale(node) {
         })
     };
 
-    _S.recalculateScale = function() {
-        _S.fullness();
-        _S.activeBonus();
+    self.recalculateScale = function() {
+        self.fullness();
+        self.activeBonus();
     };
 
-    _S.init = function() {
-        _S.positionMark();
-        _S.setLeading();
-        _S.fullness();
-        _S.activeBonus();
+    self.init = function() {
+        self.positionMark();
+        self.setLeading();
+        self.fullness();
+        self.activeBonus();
     };
 
     return {
-        init: _S.init,
-        recalculate: _S.recalculateScale
+        init: self.init,
+        recalculate: self.recalculateScale
     }
 }

@@ -225,6 +225,7 @@
 
 .bonus-scroll {
   height: 100%;
+  padding: 0 0 60px;
 }
 
 .bonus-picture {
@@ -255,6 +256,12 @@
     border: 1px solid $c-gray-12;
     height: 45px;
     width: 100%;
+
+    @media (hover: hover) {
+        &:hover {
+          cursor: pointer;
+        }
+    }
 
     &:after {
       content: '';
@@ -331,7 +338,8 @@
   }
 
   &__result {
-
+    display: block;
+    flex-shrink: 0;
   }
 
   &__text {
@@ -382,10 +390,12 @@
 }
 
 .bonus-info {
+  position: relative;
   display: block;
-  width: 10px;
-  height: 10px;
+  width: 12px;
+  height: 18px;
   cursor: pointer;
+  padding: 3px 0;
 
   &__ico {
     display: block;
@@ -393,9 +403,5 @@
     & svg {
       display: block;
     }
-  }
-
-  &__tooltip {
-    display: none;
   }
 }

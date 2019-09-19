@@ -15,13 +15,13 @@ function ContainerDetail(node) {
     self.contentTable = self.node.querySelector('[data-content="table-bonus"]') || null;
 
     self.btnCloseContentTable = self.node.querySelector('[data-close-content="table-bonus"]') || null;
-    self.btnOpenContentTable = self.node.querySelector('[data-open-content="table-bonus"]') || null;
+    self.btnOpenContentTable = self.node.querySelectorAll('[data-open-content="table-bonus"]') || null;
     self.btnCloseContainerBonus = self.node.querySelector('[data-close-container="bonus"]') || null;
 
     self.btnOpenPopupBonus = document.querySelector('[data-open-content="bonus"]') || null;
     self.btnOpenPopupDetail = document.querySelector('[data-open-content="detail"]') || null;
 
-    self.btnOpenContentDetail = self.node.querySelector('.table[data-table="bonus"] .table-body .table-row') || null;
+    self.btnOpenContentDetail = self.node.querySelectorAll('.table[data-table="bonus"] .table-body .table-row') || null;
 
     self.openPopup = function() {
         self.node.classList.add('open');
@@ -78,6 +78,11 @@ function ContainerDetail(node) {
         self.openContent(self.contentDetail);
     };
 
+    self.closeDetail = function() {
+        self.closePopup();
+        self.closeContent(self.contentDetail);
+    };
+
     self.openBonus = function() {
         self.openContent(self.contentBonus);
         self.openPopup();
@@ -85,52 +90,90 @@ function ContainerDetail(node) {
         self.contentDetail.dataset.status = "secondary";
     };
 
-    self.btnOpenPopupBonus.addEventListener('click', self.openBonus);
+    if (self.btnOpenPopupBonus) {
+        self.btnOpenPopupBonus.addEventListener('click', self.openBonus);
+    }
 
-    self.btnOpenPopupDetail.addEventListener('click', self.openDetail);
+    if (self.btnOpenPopupDetail) {
+        self.btnOpenPopupDetail.addEventListener('click', self.openDetail);
+    }
 
-    self.btnOpenContentTable.addEventListener('click', function() {
-        self.openContent(self.contentTable);
-    });
 
-    self.btnCloseContentTable.addEventListener('click', function() {
-        self.closeContent(self.contentTable);
-    });
-
-    self.btnOpenContentDetail.addEventListener('dblclick', function() {
-        self.closeContent(self.contentBonus);
-        self.openContent(self.contentDetail);
-    });
-
-    self.btnCloseContentDetail.addEventListener('click', function() {
-        if (self.contentBonus.dataset.status === "main") {
-            self.openContent(self.contentBonus);
-            self.openContent(self.contentTable);
-        } else {
-            self.closePopup();
-        }
-
-        self.closeGallery();
-        self.closeContent(self.contentDetail);
-    });
-
-    self.btnCloseGallery.addEventListener('click', function() {
-        if (self.contentBonus.dataset.status === "main") {
-            self.openContent(self.contentTable);
-        }
-
-        self.closeGallery();
-    });
-
-    self.btnCloseContainerBonus.addEventListener('click', function() {
-        if (self.contentBonus.dataset.status === "main") {
+    if (self.btnCloseContentTable) {
+        self.btnCloseContentTable.addEventListener('click', function() {
             self.closeContent(self.contentTable);
-            self.closeContent(self.contentBonus);
-            self.closePopup();
-            self.contentBonus.dataset.status = "secondary";
-            self.contentDetail.dataset.status = "main";
-        }
-    });
+            self.contentTable.dataset.open = "false";
+        });
+    }
+
+
+    if (self.btnCloseContentDetail) {
+        self.btnCloseContentDetail.addEventListener('click', function() {
+            if (self.contentBonus.dataset.status === "main") {
+                self.openContent(self.contentBonus);
+                self.openContent(self.contentTable);
+            } else {
+                self.closePopup();
+            }
+
+            self.closeGallery();
+            self.closeContent(self.contentDetail);
+        });
+    }
+
+
+    if (self.btnCloseContainerBonus) {
+        self.btnCloseContainerBonus.addEventListener('click', function() {
+            if (self.contentBonus.dataset.status === "main") {
+                self.closeContent(self.contentTable);
+                self.closeContent(self.contentBonus);
+                self.closePopup();
+                self.contentBonus.dataset.status = "secondary";
+                self.contentDetail.dataset.status = "main";
+            }
+        });
+    }
+
+
+    if (self.btnCloseGallery) {
+        self.btnCloseGallery.addEventListener('click', function() {
+            if (self.contentBonus.dataset.status === "main") {
+                self.openContent(self.contentTable);
+            }
+
+            self.closeGallery();
+        });
+    }
+
+
+    if(self.btnOpenContentTable.length){
+        [].forEach.call(self.btnOpenContentTable, function(btn) {
+            btn.addEventListener('click', function() {
+                if (self.contentTable.dataset.open === "false") {
+                    self.contentTable.dataset.open = "true";
+
+                    self.openContent(self.contentTable);
+                } else {
+                    self.closeContent(self.contentTable);
+
+                    setTimeout(function() {
+                        self.openContent(self.contentTable);
+                    } , 400);
+                }
+
+
+            });
+        });
+    }
+
+    if(self.btnOpenContentDetail.length){
+        [].forEach.call(self.btnOpenContentDetail, function(btn) {
+            btn.addEventListener('dblclick', function() {
+                self.closeContent(self.contentBonus);
+                self.openContent(self.contentDetail);
+            });
+        });
+    }
 
     if(self.btnOpenGallery.length){
         [].forEach.call(self.btnOpenGallery, function(btn) {
@@ -143,12 +186,17 @@ function ContainerDetail(node) {
 
     if(self.substrateGallery){
         self.substrateGallery.addEventListener('click', function() {
+            if (self.contentBonus.dataset.status === "main") {
+                self.openContent(self.contentTable);
+            }
+
             self.closeGallery();
         });
     }
 
     return {
         open: self.openDetail,
+        close: self.closeDetail,
         openBonus: self.openBonus,
     }
 }

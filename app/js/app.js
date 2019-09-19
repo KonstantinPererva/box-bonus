@@ -18,6 +18,7 @@ if (document.querySelector('.bonus-scroll')) {
     });
 }
 
+// set scale
 if (document.querySelector('[data-scale="bonus"]')) {
     var scaleList = document.querySelectorAll('[data-scale="bonus"]');
     [].forEach.call(scaleList, function (scale) {
@@ -28,7 +29,17 @@ if (document.querySelector('[data-scale="bonus"]')) {
     });
 }
 
-// open bonus table
-$('.bonus-button').click(function () {
-    $('.bonus__table').addClass('open');
-});
+// set tooltip
+if (document.querySelector('.bonus-picture')) {
+    var pictures = document.querySelectorAll('.bonus-picture');
+    [].forEach.call(pictures, function (el) {
+        new Tooltip(el);
+    });
+}
+
+if (document.querySelector('.bonus-info')) {
+    var infoBlock = document.querySelectorAll('.bonus-info');
+    [].forEach.call(infoBlock, function (el) {
+        new Tooltip(el);
+    });
+}
